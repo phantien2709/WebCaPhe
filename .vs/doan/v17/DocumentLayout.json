@@ -1,0 +1,107 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\domoc\\Documents\\YEAR 3 SEM 2\\DESIGN PATTERN\\DO AN\\Fivemen-coffee-website-main\\Fivemen-coffee-website-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\year 3 sem 2\\design pattern\\do an\\fivemen-coffee-website-main\\fivemen-coffee-website-main\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\year 3 sem 2\\design pattern\\do an\\fivemen-coffee-website-main\\fivemen-coffee-website-main\\models\\danhmucsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:models\\danhmucsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\year 3 sem 2\\design pattern\\do an\\fivemen-coffee-website-main\\fivemen-coffee-website-main\\doan.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:doan.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\year 3 sem 2\\design pattern\\do an\\fivemen-coffee-website-main\\fivemen-coffee-website-main\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\year 3 sem 2\\design pattern\\do an\\fivemen-coffee-website-main\\fivemen-coffee-website-main\\models\\giohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:models\\giohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\YEAR 3 SEM 2\\DESIGN PATTERN\\DO AN\\Fivemen-coffee-website-main\\Fivemen-coffee-website-main\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\YEAR 3 SEM 2\\DESIGN PATTERN\\DO AN\\Fivemen-coffee-website-main\\Fivemen-coffee-website-main\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T13:17:49.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Danhmucsp.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\YEAR 3 SEM 2\\DESIGN PATTERN\\DO AN\\Fivemen-coffee-website-main\\Fivemen-coffee-website-main\\Models\\Danhmucsp.cs",
+              "RelativeDocumentMoniker": "Models\\Danhmucsp.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\YEAR 3 SEM 2\\DESIGN PATTERN\\DO AN\\Fivemen-coffee-website-main\\Fivemen-coffee-website-main\\Models\\Danhmucsp.cs",
+              "RelativeToolTip": "Models\\Danhmucsp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T13:17:39.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\YEAR 3 SEM 2\\DESIGN PATTERN\\DO AN\\Fivemen-coffee-website-main\\Fivemen-coffee-website-main\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\YEAR 3 SEM 2\\DESIGN PATTERN\\DO AN\\Fivemen-coffee-website-main\\Fivemen-coffee-website-main\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T11:53:30.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "doan",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\YEAR 3 SEM 2\\DESIGN PATTERN\\DO AN\\Fivemen-coffee-website-main\\Fivemen-coffee-website-main\\doan.csproj",
+              "RelativeDocumentMoniker": "doan.csproj",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\YEAR 3 SEM 2\\DESIGN PATTERN\\DO AN\\Fivemen-coffee-website-main\\Fivemen-coffee-website-main\\doan.csproj",
+              "RelativeToolTip": "doan.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-06T11:51:40.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GioHang.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\YEAR 3 SEM 2\\DESIGN PATTERN\\DO AN\\Fivemen-coffee-website-main\\Fivemen-coffee-website-main\\Models\\GioHang.cs",
+              "RelativeDocumentMoniker": "Models\\GioHang.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\YEAR 3 SEM 2\\DESIGN PATTERN\\DO AN\\Fivemen-coffee-website-main\\Fivemen-coffee-website-main\\Models\\GioHang.cs",
+              "RelativeToolTip": "Models\\GioHang.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T11:07:12.024Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
