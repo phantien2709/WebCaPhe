@@ -21,8 +21,8 @@ namespace doan.Controllers
         [HttpGet]
         public IActionResult SignIn()
         {
-            var makh = HttpContext.Session.GetString("KhachHang");
-            if (makh != null)
+            var cusId = HttpContext.Session.GetString("KhachHang");
+            if (cusId != null)
             {
                 _notyfyService.Warning("Bạn đã đăng nhập. Hãy đăng xuất trước khi thực hiện nếu muốn.");
                 return Redirect("/Home/Index");
@@ -32,8 +32,8 @@ namespace doan.Controllers
         [HttpGet]
         public IActionResult SignUp()
         {
-            var makh = HttpContext.Session.GetString("KhachHang");
-            if (makh != null)
+            var cusId = HttpContext.Session.GetString("KhachHang");
+            if (cusId != null)
             {
                 _notyfyService.Warning("Bạn đã đăng nhập. Hãy đăng xuất trước khi thực hiện nếu muốn.");
                 return Redirect("/Home/Index");
@@ -41,19 +41,19 @@ namespace doan.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Dangnhap(string sdt, string pass)
+        public IActionResult Login(string phone, string pass)
         {
-            var makh = HttpContext.Session.GetString("KhachHang");
+            var cusId = HttpContext.Session.GetString("KhachHang");
             StoreContext context = HttpContext.RequestServices.GetService(typeof(doan.Models.StoreContext)) as StoreContext;
-            Taikhoan tk = context.GetTaikhoan(sdt, pass);
-            if (tk.MaTk != 0)
+            Account acc = context.GetTaikhoan(phone, pass);
+            if (acc.MaTk != 0)
             {
-                Roles role = context.GetRoles(tk.RoleId);
+                Roles role = context.GetRoles(acc.RoleId);
                 if (role.RoleName.Equals("Khách hàng"))
                 {
-                    Khachhang kh = context.GetKhachHang(tk.SoDienThoai);
-                    HttpContext.Session.SetString("KhachHang", kh.MaKh.ToString());
-                    HttpContext.Session.SetString("TaiKhoan", tk.MaTk.ToString());
+                    Customer cus = context.GetKhachHang(acc.SoDienThoai);
+                    HttpContext.Session.SetString("KhachHang", cus.MaKh.ToString());
+                    HttpContext.Session.SetString("TaiKhoan", acc.MaTk.ToString());
                 }
                 else
                 {
@@ -70,9 +70,9 @@ namespace doan.Controllers
             }            
         }
         [HttpPost]
-        public IActionResult Dangky(string tenKH, string sdt, DateTime ngay, string gt, string diachi, string pass, string confirmpass)
+        public IActionResult Register(string cusName, string phone, DateTime dob, string gender, string address, string pass, string confirmpass)
         {
-            if ((tenKH.Length > 50 || diachi.Length > 50) || (sdt.Length > 10 || pass.Length > 20))
+            if ((cusName.Length > 50 || address.Length > 50) || (phone.Length > 10 || pass.Length > 20))
             {
                 _notyfyService.Error("Một số lỗi đã xảy ra. Vui lòng đăng ký lại.");
                 return Redirect("/Login/SignUp");
@@ -82,21 +82,21 @@ namespace doan.Controllers
 
 
                 StoreContext context = HttpContext.RequestServices.GetService(typeof(doan.Models.StoreContext)) as StoreContext;
-                Khachhang kh = context.GetKhachHang(sdt);
-                if (kh.MaKh != 0)
+                Customer cus = context.GetKhachHang(phone);
+                if (cus.MaKh != 0)
                 {
                     _notyfyService.Error("Số điện thoại đã đăng ký. Vui lòng dùng số khác.");
                     return Redirect("/Login/SignUp");
                 }
                 else
                 {
-                    int check = context.insert_KhachHang(tenKH, sdt, ngay, gt, diachi);
+                    int check = context.insert_KhachHang(cusName, phone, dob, gender, address);
                     if (check != 0)
                     {
-                        int tmp = context.insert_TaiKhoan(sdt, pass);
+                        int tmp = context.insert_TaiKhoan(phone, pass);
                         if (tmp != 0)
                         {
-                            Khachhang k = context.GetKhachHang(sdt);
+                            Customer k = context.GetKhachHang(phone);
                             HttpContext.Session.SetString("TaiKhoan", tmp.ToString());
                             HttpContext.Session.SetString("KhachHang", k.MaKh.ToString());
                             _notyfyService.Success("Đăng ký thành công.");
@@ -115,8 +115,8 @@ namespace doan.Controllers
         }
         public IActionResult Signout()
         {
-            var makh = HttpContext.Session.GetString("KhachHang");
-            if (makh == null)
+            var cusId = HttpContext.Session.GetString("KhachHang");
+            if (cusId == null)
             {
                 _notyfyService.Warning("Bạn chưa đăng nhập.");
                 return Redirect("/Home/Index");

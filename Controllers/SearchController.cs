@@ -10,23 +10,23 @@ namespace doan.Controllers
     public class SearchController:Controller
     {
         [HttpGet]
-        public IActionResult SearchSP(string tukhoa)
+        public IActionResult SearchProduct(string keyWord)
         {
             StoreContext context= HttpContext.RequestServices.GetService(typeof(doan.Models.StoreContext)) as StoreContext;
             try
             {
-                if (tukhoa == null) return Redirect("/Home/Index");
+                if (keyWord == null) return Redirect("/Home/Index");
                 else
                 {
-                    List<Sanpham> listSP = context.sqlSearchSP(tukhoa);
-                    ViewData.Model = listSP;
-                    List<string> listHA = new List<string>();
-                    foreach (var item in listSP)
+                    List<Product> listProduct = context.sqlSearchSP(keyWord);
+                    ViewData.Model = listProduct;
+                    List<string> listImg = new List<string>();
+                    foreach (var item in listProduct)
                     {
                         string str = context.HinhAnhSP(item.MaSp)[0].LinkHinhAnh;
-                        listHA.Add(str);
+                        listImg.Add(str);
                     }
-                    ViewBag.HinhAnhSP = listHA;
+                    ViewBag.HinhAnhSP = listImg;
                 }
             } 
             catch (Exception)

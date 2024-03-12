@@ -23,9 +23,9 @@ namespace doan.Models
         /* -----------------------------
         *  SQL Search 
         *--------------------------------*/
-        public List<Sanpham> sqlSearchSP(string tukhoa)
+        public List<Product> sqlSearchSP(string tukhoa)
         {
-            List<Sanpham> list = new List<Sanpham>();
+            List<Product> list = new List<Product>();
             string khoa;
             char[] ch = new char[tukhoa.Length];
 
@@ -44,7 +44,7 @@ namespace doan.Models
                 {
                     while (reader.Read())
                     {
-                        list.Add(new Sanpham()
+                        list.Add(new Product()
                         {
                             MaSp = Convert.ToInt32(reader["MaSp"]),
                             TenSp = reader["TenSp"].ToString(),
@@ -60,9 +60,9 @@ namespace doan.Models
         /* -----------------------------
        *  SQL Them vao gio hang 
        *--------------------------------*/
-        public Sanpham Product_id(int id)
+        public Product Product_id(int id)
         {
-            Sanpham cart_item = new Sanpham();
+            Product cart_item = new Product();
 
             using (SqlConnection conn = GetConnection())
             {
@@ -86,9 +86,9 @@ namespace doan.Models
             return cart_item;
         }
 
-        public List<Hinhanh> HinhAnhSP(int id)
+        public List<Image> HinhAnhSP(int id)
         {
-            List<Hinhanh> list = new List<Hinhanh>();
+            List<Image> list = new List<Image>();
             using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
@@ -98,7 +98,7 @@ namespace doan.Models
                 {
                     while (reader.Read())
                     {
-                        list.Add(new Hinhanh()
+                        list.Add(new Image()
                         {
                             MaHinhAnh = Convert.ToInt32(reader["mahinhanh"]),
                             MaSp = Convert.ToInt32(reader["masp"]),
@@ -121,9 +121,9 @@ namespace doan.Models
         /* -----------------------------
        *  SQL Don Dat Hang 
        *--------------------------------*/
-        public List<Nhavanchuyen> getNVC()
+        public List<Carrier> getNVC()
         {
-            List<Nhavanchuyen> list_Nvc = new List<Nhavanchuyen>();
+            List<Carrier> list_Nvc = new List<Carrier>();
 
             using (SqlConnection conn = GetConnection())
             {
@@ -134,7 +134,7 @@ namespace doan.Models
                 {
                     while (reader.Read())
                     {
-                        list_Nvc.Add(new Nhavanchuyen()
+                        list_Nvc.Add(new Carrier()
                         {
                             MaNvc = Convert.ToInt32(reader["MaNVC"]),
                             TenNvc = reader["TenNVC"].ToString(),
@@ -213,9 +213,9 @@ namespace doan.Models
         /* -----------------------------
        *  SQL Dang nhap
        *--------------------------------*/
-        public Taikhoan GetTaikhoan(string sdt, string pass)
+        public Account GetTaikhoan(string sdt, string pass)
         {
-            Taikhoan tk = new Taikhoan();
+            Account tk = new Account();
             using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
@@ -259,9 +259,9 @@ namespace doan.Models
             }
             return r;
         }
-        public Khachhang GetKhachHang(string sdt)
+        public Customer GetKhachHang(string sdt)
         {
-            Khachhang kh = new Khachhang();
+            Customer kh = new Customer();
             using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
@@ -334,9 +334,9 @@ namespace doan.Models
         /* -----------------------------
       *  SQL Tai Khoan KH
       *--------------------------------*/
-        public Khachhang GetKhachHangbyid(int id)
+        public Customer GetKhachHangbyid(int id)
         {
-            Khachhang kh = new Khachhang();
+            Customer kh = new Customer();
             using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
@@ -359,13 +359,13 @@ namespace doan.Models
             }
             return kh;
         }
-        public List<Dondathang> GetDonHangbyidKH(int id)
+        public List<PurchaseOrder> GetDonHangbyidKH(int id)
         {
-            List<Dondathang> ddh = new List<Dondathang>();
+            List<PurchaseOrder> ddh = new List<PurchaseOrder>();
             using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
-                string query = "select * from Dondathang where MaKh = @id";
+                string query = "select * from PurchaseOrder where MaKh = @id";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("id", id);
                 using (var reader = cmd.ExecuteReader())
@@ -373,7 +373,7 @@ namespace doan.Models
                     while (reader.Read())
                     {
                         //var tt = (reader["tinhtrangdonhang"] != DBNull.Value) ? Convert.ToInt32(reader["tinhtrangdonhang"]) : 1;
-                        ddh.Add(new Dondathang()
+                        ddh.Add(new PurchaseOrder()
                         {
                             MaDdh = Convert.ToInt32(reader["maddh"]),
                             NgayDatHang = Convert.ToDateTime(reader["ngaydathang"]),
@@ -387,9 +387,9 @@ namespace doan.Models
             }
             return ddh;
         }
-        public Taikhoan GetTaikhoanbyid(int id)
+        public Account GetTaikhoanbyid(int id)
         {
-            Taikhoan tk = new Taikhoan();
+            Account tk = new Account();
             using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
@@ -428,9 +428,9 @@ namespace doan.Models
             }
         }
 
-        public List<Ctdh> GetCtdhs(int id)
+        public List<OrderDetail> GetCtdhs(int id)
         {
-            List<Ctdh> ctdh = new List<Ctdh>();
+            List<OrderDetail> ctdh = new List<OrderDetail>();
             using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
@@ -441,7 +441,7 @@ namespace doan.Models
                 {
                     while (reader.Read())
                     {
-                        ctdh.Add(new Ctdh()
+                        ctdh.Add(new OrderDetail()
                         {
                             MaDdh = Convert.ToInt32(reader["maddh"]),
                             MaSp = Convert.ToInt32(reader["masp"]),
@@ -455,13 +455,13 @@ namespace doan.Models
             }
             return ctdh;
         }
-        public Dondathang GetDonDHbyid(int id)
+        public PurchaseOrder GetDonDHbyid(int id)
         {
-            Dondathang ddh = new Dondathang();
+            PurchaseOrder ddh = new PurchaseOrder();
             using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
-                string query = "select * from Dondathang where maddh = @id";
+                string query = "select * from PurchaseOrder where maddh = @id";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("id", id);
                 using (var reader = cmd.ExecuteReader())
@@ -601,9 +601,9 @@ namespace doan.Models
 
         //lấy 8 đơn đặt hàng gần nhất
 
-        public List<Dondathang> get8_Dondathang()
+        public List<PurchaseOrder> get8_Dondathang()
         {
-            List<Dondathang> list_Ddh = new List<Dondathang>();
+            List<PurchaseOrder> list_Ddh = new List<PurchaseOrder>();
 
             using (SqlConnection conn = GetConnection())
             {
@@ -614,7 +614,7 @@ namespace doan.Models
                 {
                     while (reader.Read())
                     {
-                        list_Ddh.Add(new Dondathang()
+                        list_Ddh.Add(new PurchaseOrder()
                         {
                             MaDdh = Convert.ToInt32(reader["MaDDH"]),
                             MaKh = Convert.ToInt32(reader["MaKh"]),
@@ -664,9 +664,9 @@ namespace doan.Models
             return sList;
         }
         //lấy 10 đơn đặt hàng có giá trị cao nhất
-        public List<Dondathang> get10_Dondathang()
+        public List<PurchaseOrder> get10_Dondathang()
         {
-            List<Dondathang> list_Ddh = new List<Dondathang>();
+            List<PurchaseOrder> list_Ddh = new List<PurchaseOrder>();
 
             using (SqlConnection conn = GetConnection())
             {
@@ -677,7 +677,7 @@ namespace doan.Models
                 {
                     while (reader.Read())
                     {
-                        list_Ddh.Add(new Dondathang()
+                        list_Ddh.Add(new PurchaseOrder()
                         {
                             MaDdh = Convert.ToInt32(reader["MaDDH"]),
                             MaKh = Convert.ToInt32(reader["MaKh"]),

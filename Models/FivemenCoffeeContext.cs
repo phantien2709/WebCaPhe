@@ -14,17 +14,17 @@ namespace doan.Models
         {
         }
 
-        public virtual DbSet<Ctdh> Ctdh { get; set; }
-        public virtual DbSet<Danhmucsp> Danhmucsp { get; set; }
-        public virtual DbSet<Dondathang> Dondathang { get; set; }
-        public virtual DbSet<Hinhanh> Hinhanh { get; set; }
-        public virtual DbSet<Khachhang> Khachhang { get; set; }
-        public virtual DbSet<Nhacungcap> Nhacungcap { get; set; }
-        public virtual DbSet<Nhanvien> Nhanvien { get; set; }
-        public virtual DbSet<Nhavanchuyen> Nhavanchuyen { get; set; }
+        public virtual DbSet<OrderDetail> Ctdh { get; set; }
+        public virtual DbSet<Category> Danhmucsp { get; set; }
+        public virtual DbSet<PurchaseOrder> Dondathang { get; set; }
+        public virtual DbSet<Image> Hinhanh { get; set; }
+        public virtual DbSet<Customer> Khachhang { get; set; }
+        public virtual DbSet<Supplier> Nhacungcap { get; set; }
+        public virtual DbSet<Staff> Nhanvien { get; set; }
+        public virtual DbSet<Carrier> Nhavanchuyen { get; set; }
         public virtual DbSet<Roles> Roles { get; set; }
-        public virtual DbSet<Sanpham> Sanpham { get; set; }
-        public virtual DbSet<Taikhoan> Taikhoan { get; set; }
+        public virtual DbSet<Product> Sanpham { get; set; }
+        public virtual DbSet<Account> Taikhoan { get; set; }
         public virtual DbSet<Voucher> Voucher { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -38,7 +38,7 @@ namespace doan.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Ctdh>(entity =>
+            modelBuilder.Entity<OrderDetail>(entity =>
             {
                 entity.HasNoKey();
 
@@ -63,7 +63,7 @@ namespace doan.Models
                     .HasConstraintName("FK_SANPHAM");
             });
 
-            modelBuilder.Entity<Danhmucsp>(entity =>
+            modelBuilder.Entity<Category>(entity =>
             {
                 entity.HasKey(e => e.MaDanhMuc)
                     .HasName("PK__DANHMUCS__B375088719F03FCF");
@@ -77,7 +77,7 @@ namespace doan.Models
                     .HasMaxLength(50);
             });
 
-            modelBuilder.Entity<Dondathang>(entity =>
+            modelBuilder.Entity<PurchaseOrder>(entity =>
             {
                 entity.HasKey(e => e.MaDdh)
                     .HasName("PK__DONDATHA__3D88C804708C0003");
@@ -122,7 +122,7 @@ namespace doan.Models
                     .HasConstraintName("FK_VOUCHER");
             });
 
-            modelBuilder.Entity<Hinhanh>(entity =>
+            modelBuilder.Entity<Image>(entity =>
             {
                 entity.HasKey(e => e.MaHinhAnh)
                     .HasName("PK__HINHANH__A9C37A9BFAAC9081");
@@ -141,7 +141,7 @@ namespace doan.Models
                     .HasConstraintName("FK_SANPHAM");
             });
 
-            modelBuilder.Entity<Khachhang>(entity =>
+            modelBuilder.Entity<Customer>(entity =>
             {
                 entity.HasKey(e => e.MaKh)
                     .HasName("PK__KHACHHAN__2725CF1EDCA4EFC5");
@@ -182,7 +182,7 @@ namespace doan.Models
                     .HasMaxLength(50);
             });
 
-            modelBuilder.Entity<Nhacungcap>(entity =>
+            modelBuilder.Entity<Supplier>(entity =>
             {
                 entity.HasKey(e => e.MaNcc)
                     .HasName("PK__NHACUNGC__3A185DEB4BCEA31C");
@@ -201,7 +201,7 @@ namespace doan.Models
                     .HasMaxLength(200);
             });
 
-            modelBuilder.Entity<Nhanvien>(entity =>
+            modelBuilder.Entity<Staff>(entity =>
             {
                 entity.HasKey(e => e.MaNv)
                     .HasName("PK__NHANVIEN__2725D70AFDF783E5");
@@ -243,7 +243,7 @@ namespace doan.Models
                     .HasMaxLength(50);
             });
 
-            modelBuilder.Entity<Nhavanchuyen>(entity =>
+            modelBuilder.Entity<Carrier>(entity =>
             {
                 entity.HasKey(e => e.MaNvc)
                     .HasName("PK__NHAVANCH__3A19786F21C2034C");
@@ -273,7 +273,7 @@ namespace doan.Models
                 entity.Property(e => e.RoleName).HasMaxLength(50);
             });
 
-            modelBuilder.Entity<Sanpham>(entity =>
+            modelBuilder.Entity<Product>(entity =>
             {
                 entity.HasKey(e => e.MaSp)
                     .HasName("PK__SANPHAM__2725081CA55CF420");
@@ -306,7 +306,7 @@ namespace doan.Models
                     .HasConstraintName("FK_NHACUNGCAP");
             });
 
-            modelBuilder.Entity<Taikhoan>(entity =>
+            modelBuilder.Entity<Account>(entity =>
             {
                 entity.HasKey(e => e.MaTk)
                     .HasName("PK__TAIKHOAN__2725007028F44506");

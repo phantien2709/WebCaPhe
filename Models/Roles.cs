@@ -7,13 +7,13 @@ namespace doan.Models
     {
         public Roles()
         {
-            Taikhoan = new HashSet<Taikhoan>();
+            Taikhoan = new HashSet<Account>();
         }
 
         public int RoleId { get; set; }
         public string RoleName { get; set; }
         public string MoTa { get; set; }
 
-        public virtual ICollection<Taikhoan> Taikhoan { get; set; }
+        public virtual ICollection<Account> Taikhoan { get; set; }
     }
 }

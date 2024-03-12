@@ -7,7 +7,7 @@ namespace doan.Models
     {
         public Voucher()
         {
-            Dondathang = new HashSet<Dondathang>();
+            Dondathang = new HashSet<PurchaseOrder>();
         }
 
         public int MaVoucher { get; set; }
@@ -16,6 +16,6 @@ namespace doan.Models
         public DateTime NgayBatDau { get; set; }
         public DateTime NgayKetThuc { get; set; }
 
-        public virtual ICollection<Dondathang> Dondathang { get; set; }
+        public virtual ICollection<PurchaseOrder> Dondathang { get; set; }
     }
 }
