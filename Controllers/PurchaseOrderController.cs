@@ -53,7 +53,7 @@ namespace doan.Controllers
             if ((name.Length > 50 || address.Length > 50) || (phone.Length > 10 ))
             {
                 _notyfyService.Error("Một số lỗi đã xảy ra. Có vẻ bạn đã nhập sai thông tin giao hàng.");
-                return Redirect("/Giohang/IndexCart");
+                return Redirect("/Cart/IndexCart");
             }
             StoreContext context = HttpContext.RequestServices.GetService(typeof(doan.Models.StoreContext)) as StoreContext;
             if (Request.Cookies["Cart"] != null)

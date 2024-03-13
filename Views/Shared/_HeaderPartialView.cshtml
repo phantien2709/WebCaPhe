@@ -42,7 +42,7 @@
                             <h4 style="font-family:'Segoe UI'; color:orangered">FIVEMEN COFFEE</h4>
                         </a>
                         <div class="header-search-area d-none d-lg-block">
-                            <form action="/Search/SearchSP?name='tukhoa'" class="header-searchbox" method="get">
+                            <form action="/Search/SearchProduct?name='tukhoa'" class="header-searchbox" method="get">
                                 <input class="input-field rounded border-dark" type="text" placeholder="Tìm kiếm" name="tukhoa">
                                 <button class="btn btn-outline-whisper btn-primary-hover rounded border-dark" type="submit"><i class="pe-7s-search"></i></button>
                             </form>
@@ -54,7 +54,7 @@
                                         <i class="pe-7s-users p-2" style="font-size:25px; color: orangered; font-weight:bolder"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingButton">
-                                        <form action="/TaiKhoanKH/Index_TaiKhoan" method="get" id="myaccount">
+                                        <form action="/CustomerAccount/IndexAccount?" method="get" id="myaccount">
                                             <a class="dropdown-item" href="#" onclick="document.getElementById('myaccount').submit();">Tài khoản của bạn</a>
                                         </form>
                                         <form action="/Login/SignIn" method="get" id="signin">
@@ -74,7 +74,7 @@
                                     </a>
                                 </li>
                                 <li class="minicart-wrap me-3 me-lg-0 align-item">
-                                    <form action="/GioHang/Index_GioHang" method="get" id="xemgiohang">
+                                    <form action="/Cart/IndexCart" method="get" id="xemgiohang">
                                         <a href="#" class="minicart-btn toolbar-btn" onclick="document.getElementById('xemgiohang').submit();">
                                             <i class="pe-7s-shopbag p-2 rounded-circle" style="font-size:25px; border: 1px solid orangered; color:orangered; font-weight:bolder"></i>
                                         </a>                                        
@@ -101,7 +101,7 @@
                                                 <a style="font-size: 18px; color: orangered" asp-controller="Home" asp-action="About">Giới thiệu</a>
                                             </li>
                                             <li>
-                                                <a style="font-size: 18px; color: orangered" asp-controller="Sanpham" asp-action="Index">Cửa hàng</a>
+                                                <a style="font-size: 18px; color: orangered" asp-controller="Products" asp-action="Index">Cửa hàng</a>
                                             </li>
                                             <li>
                                                 <a style="font-size: 18px; color: orangered" asp-controller="Home" asp-action="Contact">Liên hệ</a>
@@ -405,7 +405,7 @@
                         <a href="#" class="button-close"><i class="pe-7s-close"></i></a>
                     </div>
                     <span class="searchbox-info">Nhập sản phẩm bạn muốn tìm kiếm nào</span>
-                    <form action="/Search/SearchSP?name='khoa'" class="hm-searchbox" method="get">
+                    <form action="/Search/SearchProducts?name='khoa'" class="hm-searchbox" method="get">
                         <input type="text" placeholder="Search" name="khoa">
                         <button class="search-btn" type="submit"><i class="pe-7s-search"></i></button>
                     </form>

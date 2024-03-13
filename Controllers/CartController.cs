@@ -81,7 +81,7 @@ namespace doan.Controllers
                 if (product.SoLuong <= 0)
                 {
                     _notyfyService.Error("Sản phẩm đã hết hàng.");
-                    return Redirect("/Giohang/IndexCart");
+                    return Redirect("/Cart/IndexCart");
                 }
                 string img = context.HinhAnhSP(productId)[0].LinkHinhAnh;
                 List<Cart> listCart = new List<Cart>()
@@ -111,7 +111,7 @@ namespace doan.Controllers
                         if (dataCart[i].sanpham.SoLuong == dataCart[i].Soluong)
                         {
                             _notyfyService.Error("Sản phẩm đã đạt số lượng tối đa.");
-                            return Redirect("/Giohang/IndexCart");
+                            return Redirect("/Cart/IndexCart");
                         }
                         dataCart[i].Soluong++;
                         check = false;
@@ -123,7 +123,7 @@ namespace doan.Controllers
                     if (product.SoLuong <= 0)
                     {
                         _notyfyService.Error("Sản phẩm đã hết hàng.");
-                        return Redirect("/Giohang/IndexCart");
+                        return Redirect("/Cart/IndexCart");
                     }
                     string img = context.HinhAnhSP(productId)[0].LinkHinhAnh;
                     dataCart.Add(new Cart
@@ -140,7 +140,7 @@ namespace doan.Controllers
             }
             _notyfyService.Success("Thêm thành công.");
             
-            return Redirect("/Giohang/IndexCart");
+            return Redirect("/Cart/IndexCart");
             
         }
         [HttpPost]
@@ -159,7 +159,7 @@ namespace doan.Controllers
 
             }
             _notyfyService.Success("Xóa thành công.");
-            return Redirect("/Giohang/IndexCart");
+            return Redirect("/Cart/IndexCart");
         }
         [HttpPost]
         public IActionResult MinusQuantity(int productId, int quantity)
@@ -182,7 +182,7 @@ namespace doan.Controllers
                 Response.Cookies.Append("Cart", JsonConvert.SerializeObject(dataCart), option);
 
             }
-            return Redirect("/Giohang/IndexCart");
+            return Redirect("/Cart/IndexCart");
         }
         [HttpPost]
         public IActionResult PlusQuantity(int productId, int quantity)
@@ -200,7 +200,7 @@ namespace doan.Controllers
                         if (dataNew.SoLuong == dataCart[i].Soluong)
                         {
                             _notyfyService.Error("Sản phẩm đã đạt số lượng tối đa.");
-                            return Redirect("/Giohang/IndexCart");
+                            return Redirect("/Cart/IndexCart");
                         }
                         else
                         {
@@ -214,7 +214,7 @@ namespace doan.Controllers
 
             }
             
-            return Redirect("/Giohang/IndexCart");
+            return Redirect("/Cart/IndexCart");
         }
     }
 }

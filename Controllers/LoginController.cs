@@ -75,7 +75,7 @@ namespace doan.Controllers
             if ((cusName.Length > 50 || address.Length > 50) || (phone.Length > 10 || pass.Length > 20))
             {
                 _notyfyService.Error("Một số lỗi đã xảy ra. Vui lòng đăng ký lại.");
-                return Redirect("/Login/SignUp");
+                return Redirect("/Login/Register");
             }
             if (pass.Equals(confirmpass))
             {
@@ -86,7 +86,7 @@ namespace doan.Controllers
                 if (cus.MaKh != 0)
                 {
                     _notyfyService.Error("Số điện thoại đã đăng ký. Vui lòng dùng số khác.");
-                    return Redirect("/Login/SignUp");
+                    return Redirect("/Login/Register");
                 }
                 else
                 {
@@ -105,12 +105,12 @@ namespace doan.Controllers
                     }
                 }
                 _notyfyService.Error("Đăng nhập không thành công. Kiểm tra thông tin đăng nhập.");
-                return Redirect("/Login/SignUp");
+                return Redirect("/Login/Register");
             }
             else
             {
                 _notyfyService.Error("Xác nhận lại mật khẩu sai.");
-                return Redirect("/Login/SignUp");
+                return Redirect("/Login/Register");
             }
         }
         public IActionResult Signout()
