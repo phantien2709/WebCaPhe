@@ -1,7 +1,7 @@
 ﻿@using PagedList.Core.Mvc
-@model PagedList.Core.IPagedList<doan.Models.Product>
+@model PagedList.Core.IPagedList<doan.Models.Sanpham>
 @{
-    Category danhmucsp = ViewBag.CurrentCat;
+    Danhmucsp danhmucsp = ViewBag.CurrentCat;
     int PageCurrent = ViewBag.CurrentPage;
     int PageNext = PageCurrent + 1;
     ViewData["Title"] = danhmucsp.MoTa + " " + ViewBag.CurrentPage;

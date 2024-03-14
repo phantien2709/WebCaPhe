@@ -31,7 +31,7 @@ namespace doan.Areas.Admin.Controllers
             slistSP = context.Top6SPbanchay();
             ViewBag.sListSP = slistSP;
 
-            List<PurchaseOrder> list_DDH = new List<PurchaseOrder>();
+            List<Dondathang> list_DDH = new List<Dondathang>();
             list_DDH = context.get8_Dondathang();
             ViewBag.ListDDH = list_DDH;
             var sl_khachhang = new SortedList<string, int>();

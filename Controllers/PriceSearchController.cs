@@ -20,7 +20,7 @@ namespace doan.Controllers
         [HttpPost]
         public IActionResult PriceSearch(string productPrice)
         {
-            List<Product> ls = new List<Product>();
+            List<Sanpham> ls = new List<Sanpham>();
             if (string.IsNullOrEmpty(productPrice) || productPrice.Length < 1)
             {
                 return PartialView("ListTheoGia", null);

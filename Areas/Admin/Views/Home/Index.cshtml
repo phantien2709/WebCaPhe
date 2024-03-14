@@ -4,7 +4,7 @@
     var danhthu = ViewData["DanhThu"];
 }
 @{
-    List<PurchaseOrder> list_ddh = (List<PurchaseOrder>)ViewBag.ListDDH;
+    List<Dondathang> list_ddh = (List<Dondathang>)ViewBag.ListDDH;
     var sList_khachhang = (SortedList<string, int>)ViewBag.sListKH;
     var slkh = (int)ViewBag.SLKH;
     var slnv = (int)ViewBag.SLNV;
@@ -20,7 +20,7 @@
                     <div class="card" style="background-color: #b7e3cc">
                         <div class="card-body">
                             <div class="d-flex justify-content-center align-items-center">
-                            <a class="btn" href="Admin/AdminKhachhangs" style="border: none">
+                            <a class="btn" href="Admin/AdminCustomers" style="border: none">
                                 <div>
                                     <p class="m-b-0 text-muted" style="font-size: 18px">Khách Hàng</p>
                                     <div>
@@ -42,7 +42,7 @@
                     <div class="card" style="background-color: #cfe8ef">
                         <div class="card-body">
                         <div class="d-flex justify-content-center align-items-center">
-                            <a class="btn" href="Admin/AdminNhanviens" style="border: none">
+                            <a class="btn" href="Admin/AdminStaffs" style="border: none">
                                 <div>
                                     <p class="m-b-0 text-muted" style="font-size: 18px">Nhân viên</p>
                                     <div>
@@ -64,7 +64,7 @@
                     <div class="card" style="background-color: #f1dede">
                         <div class="card-body">
                         <div class="d-flex justify-content-center align-items-center">
-                            <a class="btn" href="Admin/AdminSanphams" style="border: none">
+                            <a class="btn" href="Admin/AdminProducts" style="border: none">
                                 <div>
                                     <p class="m-b-0 text-muted" style="font-size: 18px">Sản phẩm</p>
                                     <div>
@@ -86,7 +86,7 @@
                     <div class="card" style="background-color: #faf4d3">
                         <div class="card-body">
                         <div class="d-flex justify-content-center align-items-center">
-                            <a class="btn" href="Admin/AdminDondathangs" style="border: none">
+                            <a class="btn" href="Admin/AdminOrders" style="border: none">
                                 <div>
                                     <p class="m-b-0 text-muted" style="font-size: 18px">Đơn đặt hàng</p>
                                     <div>
@@ -144,7 +144,7 @@
         <div class="d-flex justify-content-between align-items-center">
             <h5 style="color: orangered; font-size: 20px">Đơn đặt hàng gần đây</h5>
             <div>
-                <a href="Admin/AdminDondathangs" class="btn btn-sm btn-warning">View All</a>
+                <a href="Admin/AdminOrders" class="btn btn-sm btn-warning">View All</a>
             </div>
         </div>
         <div class="m-t-30">

@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\views\\login\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:views\\login\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\views\\shared\\_sidenavpatialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\views\\shared\\_sidenavpatialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\views\\login\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:views\\login\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\views\\shared\\_headerpartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:views\\shared\\_headerpartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\controllers\\statisticcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\controllers\\statisticcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,19 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SignIn.cshtml",
-              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Views\\Login\\SignIn.cshtml",
-              "RelativeDocumentMoniker": "Views\\Login\\SignIn.cshtml",
-              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Views\\Login\\SignIn.cshtml",
-              "RelativeToolTip": "Views\\Login\\SignIn.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAD4AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-13T13:02:24.919Z",
+              "DocumentIndex": 1,
+              "Title": "StatisticController.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\StatisticController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\StatisticController.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\StatisticController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\StatisticController.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAqwEYAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T07:17:02.725Z",
               "EditorCaption": ""
             },
             {
@@ -47,41 +39,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAA1wC0AAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T13:00:45.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Views\\Login\\Register.cshtml",
-              "RelativeDocumentMoniker": "Views\\Login\\Register.cshtml",
-              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Views\\Login\\Register.cshtml",
-              "RelativeToolTip": "Views\\Login\\Register.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowCwAAAATAAAA",
+              "DocumentIndex": 0,
+              "Title": "_SideNavPatialView.cshtml",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\Shared\\_SideNavPatialView.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_SideNavPatialView.cshtml",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\Shared\\_SideNavPatialView.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_SideNavPatialView.cshtml",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAAAIUAAABfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-13T12:59:39.23Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_HeaderPartialView.cshtml",
-              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Views\\Shared\\_HeaderPartialView.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_HeaderPartialView.cshtml",
-              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Views\\Shared\\_HeaderPartialView.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_HeaderPartialView.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAwCwAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-13T11:46:22.907Z",
+              "WhenOpened": "2024-03-14T06:39:14.941Z",
               "EditorCaption": ""
             }
           ]
