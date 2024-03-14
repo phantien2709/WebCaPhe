@@ -54,7 +54,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaNcc,TenNcc,DiaChi,Email")] Nhacungcap supplier)
+        public async Task<IActionResult> Create([Bind("MaNcc,TenNcc,DiaChi,Email")] Supplier supplier)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaNcc,TenNcc,DiaChi,Email")] Nhacungcap supplier)
+        public async Task<IActionResult> Edit(int id, [Bind("MaNcc,TenNcc,DiaChi,Email")] Supplier supplier)
         {
             if (id != supplier.MaNcc)
             {

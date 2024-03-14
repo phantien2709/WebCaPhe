@@ -57,7 +57,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaNv,TenNv,SoDienThoai,NgaySinh,GioiTinh,DiaChi,NgayVaoLam,ChucVu")] Nhanvien staff)
+        public async Task<IActionResult> Create([Bind("MaNv,TenNv,SoDienThoai,NgaySinh,GioiTinh,DiaChi,NgayVaoLam,ChucVu")] Staff staff)
         {
             if (ModelState.IsValid)
             {
@@ -89,7 +89,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaNv,TenNv,SoDienThoai,NgaySinh,GioiTinh,DiaChi,NgayVaoLam,ChucVu")] Nhanvien staff)
+        public async Task<IActionResult> Edit(int id, [Bind("MaNv,TenNv,SoDienThoai,NgaySinh,GioiTinh,DiaChi,NgayVaoLam,ChucVu")] Staff staff)
         {
             if (id != staff.MaNv)
             {

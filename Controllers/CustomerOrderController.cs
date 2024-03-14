@@ -12,11 +12,11 @@ namespace doan.Controllers
         public IActionResult IndexCustomerOrder(int cusId)
         {
             StoreContext context = HttpContext.RequestServices.GetService(typeof(doan.Models.StoreContext)) as StoreContext;
-            List<GioHang> list = new List<GioHang>();
+            List<Cart> list = new List<Cart>();
             var detail = context.GetCtdhs(cusId);
             foreach(var item in detail)
             {
-                list.Add(new GioHang() { 
+                list.Add(new Cart() { 
                     sanpham =context.Product_id(item.MaSp),
                     Soluong = item.SoLuong,
                     hinhanh = context.HinhAnhSP(item.MaSp)[0].LinkHinhAnh

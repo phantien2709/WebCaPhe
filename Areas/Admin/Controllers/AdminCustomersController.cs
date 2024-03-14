@@ -31,7 +31,7 @@ namespace doan.Areas.Admin.Controllers
             var pageSize = 20;
             var isCustomers = _context.Khachhang.AsNoTracking()
                 .OrderBy(x => x.MaKh);
-            PagedList<Khachhang> models = new PagedList<Khachhang>(isCustomers, pageNumber, pageSize);
+            PagedList<Customer> models = new PagedList<Customer>(isCustomers, pageNumber, pageSize);
             ViewBag.CurrentPage = pageNumber;
             return View(models);
         }
@@ -65,7 +65,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaKh,TenKh,SoDienThoai,NgaySinh,GioiTinh,DiaChi,LoaiKh")] Khachhang cus)
+        public async Task<IActionResult> Create([Bind("MaKh,TenKh,SoDienThoai,NgaySinh,GioiTinh,DiaChi,LoaiKh")] Customer cus)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaKh,TenKh,SoDienThoai,NgaySinh,GioiTinh,DiaChi,LoaiKh")] Khachhang customer)
+        public async Task<IActionResult> Edit(int id, [Bind("MaKh,TenKh,SoDienThoai,NgaySinh,GioiTinh,DiaChi,LoaiKh")] Customer customer)
         {
             if (id != customer.MaKh)
             {

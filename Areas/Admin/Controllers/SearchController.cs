@@ -33,7 +33,7 @@ namespace doan.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult SearchSanpham(string keyword)
         {
-            List<Sanpham> ls = new List<Sanpham>();
+            List<Product> ls = new List<Product>();
             if (string.IsNullOrEmpty(keyword) || keyword.Length < 1)
             {
                 return PartialView("ListProductsSearchPartial", null);

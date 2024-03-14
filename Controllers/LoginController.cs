@@ -45,13 +45,13 @@ namespace doan.Controllers
         {
             var cusId = HttpContext.Session.GetString("KhachHang");
             StoreContext context = HttpContext.RequestServices.GetService(typeof(doan.Models.StoreContext)) as StoreContext;
-            Taikhoan acc = context.GetTaikhoan(phone, pass);
+            Account acc = context.GetTaikhoan(phone, pass);
             if (acc.MaTk != 0)
             {
                 Roles role = context.GetRoles(acc.RoleId);
                 if (role.RoleName.Equals("Khách hàng"))
                 {
-                    Khachhang cus = context.GetKhachHang(acc.SoDienThoai);
+                    Customer cus = context.GetKhachHang(acc.SoDienThoai);
                     HttpContext.Session.SetString("KhachHang", cus.MaKh.ToString());
                     HttpContext.Session.SetString("TaiKhoan", acc.MaTk.ToString());
                 }
@@ -82,7 +82,7 @@ namespace doan.Controllers
 
 
                 StoreContext context = HttpContext.RequestServices.GetService(typeof(doan.Models.StoreContext)) as StoreContext;
-                Khachhang cus = context.GetKhachHang(phone);
+                Customer cus = context.GetKhachHang(phone);
                 if (cus.MaKh != 0)
                 {
                     _notyfyService.Error("Số điện thoại đã đăng ký. Vui lòng dùng số khác.");
@@ -96,7 +96,7 @@ namespace doan.Controllers
                         int tmp = context.insert_TaiKhoan(phone, pass);
                         if (tmp != 0)
                         {
-                            Khachhang k = context.GetKhachHang(phone);
+                            Customer k = context.GetKhachHang(phone);
                             HttpContext.Session.SetString("TaiKhoan", tmp.ToString());
                             HttpContext.Session.SetString("KhachHang", k.MaKh.ToString());
                             _notyfyService.Success("Đăng ký thành công.");

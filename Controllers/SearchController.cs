@@ -18,7 +18,7 @@ namespace doan.Controllers
                 if (keyWord == null) return Redirect("/Home/Index");
                 else
                 {
-                    List<Sanpham> listProduct = context.sqlSearchSP(keyWord);
+                    List<Product> listProduct = context.sqlSearchSP(keyWord);
                     ViewData.Model = listProduct;
                     List<string> listImg = new List<string>();
                     foreach (var item in listProduct)

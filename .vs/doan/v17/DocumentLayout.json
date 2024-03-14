@@ -3,12 +3,108 @@
   "WorkspaceRootPath": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\views\\shared\\_sidenavpatialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\views\\shared\\_sidenavpatialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\controllers\\statisticcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\controllers\\statisticcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\models\\carrier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:models\\carrier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\models\\purchaseorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:models\\purchaseorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\controllers\\adminpicturescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\controllers\\adminpicturescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\controllers\\adminproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\controllers\\adminproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\controllers\\adminorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\controllers\\adminorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\controllers\\admincustomerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\controllers\\admincustomerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\controllers\\admincategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\controllers\\admincategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\views\\admincategories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\views\\admincategories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\controllers\\adminsupplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\controllers\\adminsupplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\controllers\\adminstaffscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\controllers\\adminstaffscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\models\\fivemencoffeecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:models\\fivemencoffeecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\controllers\\adminaccountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\controllers\\adminaccountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\controllers\\admincarrierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\controllers\\admincarrierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\views\\adminaccounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\views\\adminaccounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\views\\adminaccounts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\views\\adminaccounts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\views\\adminaccounts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\views\\adminaccounts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\views\\adminaccounts\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\views\\adminaccounts\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|c:\\users\\domoc\\documents\\github\\webcaphe\\areas\\admin\\views\\adminaccounts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3FF705A3-FE0B-4B90-A6CA-B4D31D306146}|doan.csproj|solutionrelative:areas\\admin\\views\\adminaccounts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,19 +114,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StatisticController.cs",
-              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\StatisticController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\StatisticController.cs",
-              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\StatisticController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\StatisticController.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAqwEYAAAApAAAA",
+              "DocumentIndex": 2,
+              "Title": "Carrier.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Carrier.cs",
+              "RelativeDocumentMoniker": "Models\\Carrier.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Carrier.cs",
+              "RelativeToolTip": "Models\\Carrier.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T07:17:02.725Z",
+              "WhenOpened": "2024-03-14T11:31:50.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Account.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "Models\\Account.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Account.cs",
+              "RelativeToolTip": "Models\\Account.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:31:39.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Supplier.cs",
+              "RelativeDocumentMoniker": "Models\\Supplier.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Supplier.cs",
+              "RelativeToolTip": "Models\\Supplier.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:31:19.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Customer.cs",
+              "RelativeToolTip": "Models\\Customer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:31:06.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "Models\\Cart.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Cart.cs",
+              "RelativeToolTip": "Models\\Cart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:30:53.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:30:42.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PurchaseOrder.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\PurchaseOrder.cs",
+              "RelativeDocumentMoniker": "Models\\PurchaseOrder.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\PurchaseOrder.cs",
+              "RelativeToolTip": "Models\\PurchaseOrder.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:30:28.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Staff.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Staff.cs",
+              "RelativeDocumentMoniker": "Models\\Staff.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Staff.cs",
+              "RelativeToolTip": "Models\\Staff.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:30:09.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "Models\\OrderDetail.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\OrderDetail.cs",
+              "RelativeToolTip": "Models\\OrderDetail.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwAYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:29:45.724Z",
               "EditorCaption": ""
             },
             {
@@ -39,15 +239,223 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_SideNavPatialView.cshtml",
-              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\Shared\\_SideNavPatialView.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_SideNavPatialView.cshtml",
-              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\Shared\\_SideNavPatialView.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_SideNavPatialView.cshtml",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAAAIUAAABfAAAA",
+              "DocumentIndex": 15,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\AdminCategories\\Create.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdminCategories\\Create.cshtml",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\AdminCategories\\Create.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\AdminCategories\\Create.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-14T06:39:14.941Z",
+              "WhenOpened": "2024-03-14T11:27:47.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AdminSuppliersController.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminSuppliersController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AdminSuppliersController.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminSuppliersController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\AdminSuppliersController.cs",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAqwDgAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:26:55.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AdminStaffsController.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminStaffsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AdminStaffsController.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminStaffsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\AdminStaffsController.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAAAF8AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:26:40.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminProductsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AdminProductsController.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminProductsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\AdminProductsController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowCAAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:26:04.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdminPicturesController.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminPicturesController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AdminPicturesController.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminPicturesController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\AdminPicturesController.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAA7wFQAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:25:36.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AdminOrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminOrdersController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AdminOrdersController.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminOrdersController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\AdminOrdersController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAswCQAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:24:07.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FivemenCoffeeContext.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\FivemenCoffeeContext.cs",
+              "RelativeDocumentMoniker": "Models\\FivemenCoffeeContext.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\FivemenCoffeeContext.cs",
+              "RelativeToolTip": "Models\\FivemenCoffeeContext.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAewBEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:23:50.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBQAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:23:42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminCustomersController.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminCustomersController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AdminCustomersController.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminCustomersController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\AdminCustomersController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAowCEAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:23:25.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AdminCategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminCategoriesController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AdminCategoriesController.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminCategoriesController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\AdminCategoriesController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAowCEAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:21:16.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AdminCarriersController.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminCarriersController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AdminCarriersController.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminCarriersController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\AdminCarriersController.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAWwFgAAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:20:56.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AdminAccountsController.cs",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminAccountsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AdminAccountsController.cs",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Controllers\\AdminAccountsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\AdminAccountsController.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAWwF8AAABoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:20:47.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\AdminAccounts\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdminAccounts\\Index.cshtml",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\AdminAccounts\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\AdminAccounts\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T11:15:54.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\AdminAccounts\\Details.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdminAccounts\\Details.cshtml",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\AdminAccounts\\Details.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\AdminAccounts\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T11:15:41.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\AdminAccounts\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdminAccounts\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\AdminAccounts\\Delete.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\AdminAccounts\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T11:15:39.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\AdminAccounts\\Create.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdminAccounts\\Create.cshtml",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\AdminAccounts\\Create.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\AdminAccounts\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T11:15:36.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\AdminAccounts\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdminAccounts\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\domoc\\Documents\\GitHub\\WebCaPhe\\Areas\\Admin\\Views\\AdminAccounts\\Edit.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\AdminAccounts\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T11:04:24.501Z",
               "EditorCaption": ""
             }
           ]

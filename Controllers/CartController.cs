@@ -31,13 +31,13 @@ namespace doan.Controllers
             if (Request.Cookies["Cart"] != null)
             {
                 var cart = Request.Cookies["Cart"];
-                List<GioHang> dataCart = JsonConvert.DeserializeObject<List<GioHang>>(cart);
+                List<Cart> dataCart = JsonConvert.DeserializeObject<List<Cart>>(cart);
                 if (dataCart.Count > 0)
                 {
                     
                     for (int i = 0; i < dataCart.Count; i++)
                     {
-                        Sanpham dataProductNew = context.Product_id(dataCart[i].sanpham.MaSp);
+                        Product dataProductNew = context.Product_id(dataCart[i].sanpham.MaSp);
                         if (dataProductNew.SoLuong <= 0)
                         {
                             _notyfyService.Error("Sản phẩm "+dataCart[i].sanpham.TenSp+" đã hết hàng.");
@@ -84,9 +84,9 @@ namespace doan.Controllers
                     return Redirect("/Cart/IndexCart");
                 }
                 string img = context.HinhAnhSP(productId)[0].LinkHinhAnh;
-                List<GioHang> listCart = new List<GioHang>()
+                List<Cart> listCart = new List<Cart>()
                {
-                   new GioHang
+                   new Cart
                    {
                        sanpham = product,
                        hinhanh = img,
@@ -102,7 +102,7 @@ namespace doan.Controllers
             {
                 //var cart = HttpContext.Session.GetString("Cart");
                 var cart = Request.Cookies["Cart"];
-                List<GioHang> dataCart = JsonConvert.DeserializeObject<List<GioHang>>(cart);
+                List<Cart> dataCart = JsonConvert.DeserializeObject<List<Cart>>(cart);
                 bool check = true;
                 for (int i = 0; i < dataCart.Count; i++)
                 {
@@ -126,7 +126,7 @@ namespace doan.Controllers
                         return Redirect("/Cart/IndexCart");
                     }
                     string img = context.HinhAnhSP(productId)[0].LinkHinhAnh;
-                    dataCart.Add(new GioHang
+                    dataCart.Add(new Cart
                     {
                         sanpham = product,
                         hinhanh = img,
@@ -150,7 +150,7 @@ namespace doan.Controllers
             var cart = Request.Cookies["Cart"];
             if (cart != null)
             {
-                List<GioHang> dataCart = JsonConvert.DeserializeObject<List<GioHang>>(cart);
+                List<Cart> dataCart = JsonConvert.DeserializeObject<List<Cart>>(cart);
                 
                 dataCart.RemoveAll(item => item.sanpham.MaSp == productId);
                 CookieOptions option = new CookieOptions();
@@ -168,7 +168,7 @@ namespace doan.Controllers
             var cart = Request.Cookies["Cart"];
             if (cart != null)
             {
-                List<GioHang> dataCart = JsonConvert.DeserializeObject<List<GioHang>>(cart);
+                List<Cart> dataCart = JsonConvert.DeserializeObject<List<Cart>>(cart);
                 for (int i = 0; i < dataCart.Count; i++)
                 {
                     if (dataCart[i].sanpham.MaSp == productId)
@@ -191,7 +191,7 @@ namespace doan.Controllers
             var cart = Request.Cookies["Cart"];
             if (cart != null)
             {
-                List<GioHang> dataCart = JsonConvert.DeserializeObject<List<GioHang>>(cart);
+                List<Cart> dataCart = JsonConvert.DeserializeObject<List<Cart>>(cart);
                 for (int i = 0; i < dataCart.Count; i++)
                 {
                     if (dataCart[i].sanpham.MaSp == productId)

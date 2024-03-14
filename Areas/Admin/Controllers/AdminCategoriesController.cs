@@ -31,7 +31,7 @@ namespace doan.Areas.Admin.Controllers
             var pageSize = 20;
             var isProCategories = _context.Danhmucsp.AsNoTracking()
                 .OrderBy(x => x.MaDanhMuc);
-            PagedList<Danhmucsp> models = new PagedList<Danhmucsp>(isProCategories, pageNumber, pageSize);
+            PagedList<Category> models = new PagedList<Category>(isProCategories, pageNumber, pageSize);
             ViewBag.CurrentPage = pageNumber;
             return View(models);
         }
@@ -65,7 +65,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaDanhMuc,TenDanhMuc,MoTa")] Danhmucsp proCategories)
+        public async Task<IActionResult> Create([Bind("MaDanhMuc,TenDanhMuc,MoTa")] Category proCategories)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaDanhMuc,TenDanhMuc,MoTa")] Danhmucsp proCategories)
+        public async Task<IActionResult> Edit(int id, [Bind("MaDanhMuc,TenDanhMuc,MoTa")] Category proCategories)
         {
             if (id != proCategories.MaDanhMuc)
             {

@@ -30,7 +30,7 @@ namespace doan.Areas.Admin.Controllers
         {
             var pageNumber = page;
             var pageSize = 20;
-            List<Sanpham> isProducts = new List<Sanpham>();
+            List<Product> isProducts = new List<Product>();
             if (cateId != 0)
             {
                 isProducts = _context.Sanpham
@@ -49,7 +49,7 @@ namespace doan.Areas.Admin.Controllers
                 .OrderBy(x => x.MaSp).ToList();
             }
 
-            PagedList<Sanpham> models = new PagedList<Sanpham>(isProducts.AsQueryable(), pageNumber, pageSize);
+            PagedList<Product> models = new PagedList<Product>(isProducts.AsQueryable(), pageNumber, pageSize);
             ViewBag.Currentmadanhmuc = cateId;
             ViewBag.CurrentPage = pageNumber;
             
@@ -101,7 +101,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaSp,TenSp,GiaTien,SoLuong,MaDanhMuc,MoTa,MaNcc")] Sanpham product)
+        public async Task<IActionResult> Create([Bind("MaSp,TenSp,GiaTien,SoLuong,MaDanhMuc,MoTa,MaNcc")] Product product)
         {
             if (product.TenSp == null || product.GiaTien == null || product.MoTa == null)
             {
@@ -147,7 +147,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaSp,TenSp,GiaTien,SoLuong,MaDanhMuc,MoTa,MaNcc")] Sanpham product)
+        public async Task<IActionResult> Edit(int id, [Bind("MaSp,TenSp,GiaTien,SoLuong,MaDanhMuc,MoTa,MaNcc")] Product product)
         {
             if (id != product.MaSp)
             {

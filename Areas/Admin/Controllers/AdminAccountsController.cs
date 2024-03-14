@@ -59,7 +59,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaTk,SoDienThoai,MatKhau,RoleId")] Taikhoan account)
+        public async Task<IActionResult> Create([Bind("MaTk,SoDienThoai,MatKhau,RoleId")] Account account)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +93,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaTk,SoDienThoai,MatKhau,RoleId")] Taikhoan account)
+        public async Task<IActionResult> Edit(int id, [Bind("MaTk,SoDienThoai,MatKhau,RoleId")] Account account)
         {
             if (id != account.MaTk)
             {

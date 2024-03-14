@@ -37,7 +37,7 @@ namespace doan.Areas.Admin.Controllers
                 .AsNoTracking()
                 .Include(x => x.MaSpNavigation)
                 .OrderBy(x => x.MaHinhAnh);
-            PagedList<Hinhanh> models = new PagedList<Hinhanh>(isImages, pageNumber, pageSize);
+            PagedList<Image> models = new PagedList<Image>(isImages, pageNumber, pageSize);
             ViewBag.CurrentPage = pageNumber;
             return View(models);
         }
@@ -74,7 +74,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaHinhAnh,LinkHinhAnh,MaSp")] Hinhanh image, IFormFile myfile)// Microsoft.AspNetCore.Http.IFormFile fLinkHinhAnh)
+        public async Task<IActionResult> Create([Bind("MaHinhAnh,LinkHinhAnh,MaSp")] Image image, IFormFile myfile)// Microsoft.AspNetCore.Http.IFormFile fLinkHinhAnh)
         {
             if (ModelState.IsValid)
             {
@@ -127,7 +127,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaHinhAnh,LinkHinhAnh,MaSp")] Hinhanh image)
+        public async Task<IActionResult> Edit(int id, [Bind("MaHinhAnh,LinkHinhAnh,MaSp")] Image image)
         {
             if (id != image.MaHinhAnh)
             {

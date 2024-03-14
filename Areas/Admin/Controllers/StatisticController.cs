@@ -46,7 +46,7 @@ namespace doan.Areas.Admin.Controllers
         public IActionResult Top10Order()
         {
             StoreContext context = HttpContext.RequestServices.GetService(typeof(doan.Models.StoreContext)) as StoreContext;
-            List<Dondathang> listOrder = context.get10_Dondathang();
+            List<PurchaseOrder> listOrder = context.get10_Dondathang();
             ViewBag.ListDH = listOrder;
             return View();
 

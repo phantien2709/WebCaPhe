@@ -30,7 +30,7 @@ namespace doan.Controllers
                 if (Request.Cookies["Cart"] != null)
                 {
                     var cart = Request.Cookies["Cart"];
-                    List<GioHang> dataCart = JsonConvert.DeserializeObject<List<GioHang>>(cart);
+                    List<Cart> dataCart = JsonConvert.DeserializeObject<List<Cart>>(cart);
                     if (dataCart.Count > 0)
                     {
                         ViewBag.carts = dataCart;
@@ -59,7 +59,7 @@ namespace doan.Controllers
             if (Request.Cookies["Cart"] != null)
             {
                 var cart = Request.Cookies["Cart"];
-                List<GioHang> dataCart = JsonConvert.DeserializeObject<List<GioHang>>(cart);
+                List<Cart> dataCart = JsonConvert.DeserializeObject<List<Cart>>(cart);
                 if (dataCart.Count > 0)
                 {
                     ViewBag.carts = dataCart;

@@ -26,7 +26,7 @@ namespace doan.Controllers
                 var pageSize = 21;
                 var isProduct = _context.Sanpham.AsNoTracking()
                     .OrderBy(x => x.MaSp);
-                PagedList<Sanpham> models = new PagedList<Sanpham>(isProduct, pageNumber, pageSize);
+                PagedList<Product> models = new PagedList<Product>(isProduct, pageNumber, pageSize);
                 ViewBag.CurrentPage = pageNumber;
                 return View(models);
             }
@@ -48,7 +48,7 @@ namespace doan.Controllers
                 var isProduct = _context.Sanpham.AsNoTracking()
                     .Where(x => x.MaDanhMuc == id)
                     .OrderBy(x => x.MaSp);
-                PagedList<Sanpham> models = new PagedList<Sanpham>(isProduct, page, pageSize);
+                PagedList<Product> models = new PagedList<Product>(isProduct, page, pageSize);
                 ViewBag.CurrentPage = page;
                 ViewBag.CurrentCat = category;
                 return View(models);

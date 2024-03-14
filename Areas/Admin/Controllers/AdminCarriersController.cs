@@ -54,7 +54,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaNvc,TenNvc,DiaChi,Email")] Nhavanchuyen carrier)
+        public async Task<IActionResult> Create([Bind("MaNvc,TenNvc,DiaChi,Email")] Carrier carrier)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaNvc,TenNvc,DiaChi,Email")] Nhavanchuyen carrier)
+        public async Task<IActionResult> Edit(int id, [Bind("MaNvc,TenNvc,DiaChi,Email")] Carrier carrier)
         {
             if (id != carrier.MaNvc)
             {

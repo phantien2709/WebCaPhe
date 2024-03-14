@@ -34,7 +34,7 @@ namespace doan.Areas.Admin.Controllers
                 .Include(x => x.MaNvNavigation)
                 .Include(x => x.MaNvcNavigation)
                 .OrderBy(x => x.MaDdh);
-            PagedList<Dondathang> models = new PagedList<Dondathang>(isOrders, pageNumber, pageSize);
+            PagedList<PurchaseOrder> models = new PagedList<PurchaseOrder>(isOrders, pageNumber, pageSize);
             ViewBag.CurrentPage = pageNumber;
             return View(models);
         }
@@ -76,7 +76,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaDdh,MaKh,MaVoucher,TongDonHang,SoTienGiam,ThanhTien,MaNv,NgayDatHang,MaNvc")] Dondathang order)
+        public async Task<IActionResult> Create([Bind("MaDdh,MaKh,MaVoucher,TongDonHang,SoTienGiam,ThanhTien,MaNv,NgayDatHang,MaNvc")] PurchaseOrder order)
         {
             if (ModelState.IsValid)
             {
@@ -116,7 +116,7 @@ namespace doan.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaDdh,MaKh,MaVoucher,TongDonHang,SoTienGiam,ThanhTien,MaNv,NgayDatHang,MaNvc")] Dondathang order)
+        public async Task<IActionResult> Edit(int id, [Bind("MaDdh,MaKh,MaVoucher,TongDonHang,SoTienGiam,ThanhTien,MaNv,NgayDatHang,MaNvc")] PurchaseOrder order)
         {
             if (id != order.MaDdh)
             {
