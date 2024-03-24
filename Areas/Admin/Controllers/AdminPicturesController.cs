@@ -33,7 +33,7 @@ namespace doan.Areas.Admin.Controllers
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
             var pageSize = 20;
-            var isImages = _context.Hinhanh
+            var isImages = _context.Image
                 .AsNoTracking()
                 .Include(x => x.MaSpNavigation)
                 .OrderBy(x => x.MaHinhAnh);
@@ -50,7 +50,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var image = await _context.Hinhanh
+            var image = await _context.Image
                 .Include(h => h.MaSpNavigation)
                 .FirstOrDefaultAsync(m => m.MaHinhAnh == id);
             if (image == null)
@@ -65,7 +65,7 @@ namespace doan.Areas.Admin.Controllers
         public IActionResult Create()
         {
             
-            ViewData["MaSp"] = new SelectList(_context.Sanpham, "MaSp", "TenSp");
+            ViewData["MaSp"] = new SelectList(_context.Products, "MaSp", "TenSp");
             return View();
         }
 
@@ -101,7 +101,7 @@ namespace doan.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaSp"] = new SelectList(_context.Sanpham, "MaSp", "TenSp", image.MaSp);
+            ViewData["MaSp"] = new SelectList(_context.Products, "MaSp", "TenSp", image.MaSp);
             return View(image);
         }
 
@@ -113,12 +113,12 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var image = await _context.Hinhanh.FindAsync(id);
+            var image = await _context.Image.FindAsync(id);
             if (image == null)
             {
                 return NotFound();
             }
-            ViewData["MaSp"] = new SelectList(_context.Sanpham, "MaSp", "TenSp", image.MaSp);
+            ViewData["MaSp"] = new SelectList(_context.Products, "MaSp", "TenSp", image.MaSp);
             return View(image);
         }
 
@@ -154,7 +154,7 @@ namespace doan.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaSp"] = new SelectList(_context.Sanpham, "MaSp", "TenSp", image.MaSp);
+            ViewData["MaSp"] = new SelectList(_context.Products, "MaSp", "TenSp", image.MaSp);
             return View(image);
         }
 
@@ -166,7 +166,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var image = await _context.Hinhanh
+            var image = await _context.Image
                 .Include(h => h.MaSpNavigation)
                 .FirstOrDefaultAsync(m => m.MaHinhAnh == id);
             if (image == null)
@@ -182,15 +182,15 @@ namespace doan.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var image = await _context.Hinhanh.FindAsync(id);
-            _context.Hinhanh.Remove(image);
+            var image = await _context.Image.FindAsync(id);
+            _context.Image.Remove(image);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ImageExists(int id)
         {
-            return _context.Hinhanh.Any(e => e.MaHinhAnh == id);
+            return _context.Image.Any(e => e.MaHinhAnh == id);
         }
     }
 }

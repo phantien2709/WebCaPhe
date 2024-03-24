@@ -1677,6 +1677,7 @@ C:\Users\domoc\Documents\GitHub\WebCaPhe\bin\Debug\net6.0\Microsoft.EntityFramew
 C:\Users\domoc\Documents\GitHub\WebCaPhe\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\domoc\Documents\GitHub\WebCaPhe\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\domoc\Documents\GitHub\WebCaPhe\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\domoc\Documents\GitHub\WebCaPhe\bin\Debug\net6.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 C:\Users\domoc\Documents\GitHub\WebCaPhe\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\domoc\Documents\GitHub\WebCaPhe\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\domoc\Documents\GitHub\WebCaPhe\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll

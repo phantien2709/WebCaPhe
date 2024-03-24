@@ -67,7 +67,7 @@ namespace doan.Models
             using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
-                string query = "select * from sanpham where masp = " + id + "";
+                string query = "select * from Sanpham where masp = " + id + "";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -75,7 +75,7 @@ namespace doan.Models
                     {
                         cart_item.MaSp = id;
                         cart_item.TenSp = reader["Tensp"].ToString();
-                        cart_item.SoLuong = Convert.ToInt32(reader["Soluong"]);
+                        cart_item.SoLuong = Convert.ToInt32(reader["volume"]);
                         cart_item.GiaTien = Convert.ToInt32(reader["giatien"]);
                     }
                     reader.Close();
@@ -86,7 +86,7 @@ namespace doan.Models
             return cart_item;
         }
 
-        public List<Image> HinhAnhSP(int id)
+        public List<Image> ProductImage(int id)
         {
             List<Image> list = new List<Image>();
             using (SqlConnection conn = GetConnection())
@@ -213,7 +213,7 @@ namespace doan.Models
         /* -----------------------------
        *  SQL Dang nhap
        *--------------------------------*/
-        public Account GetTaikhoan(string sdt, string pass)
+        public Account GetTaikhoan(string phone, string pass)
         {
             Account tk = new Account();
             using (SqlConnection conn = GetConnection())
@@ -221,7 +221,7 @@ namespace doan.Models
                 conn.Open();
                 string query = "select * from TaiKhoan where Sodienthoai = @sdt and matkhau=@pass";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("sdt", sdt);
+                cmd.Parameters.AddWithValue("sdt", phone);
                 cmd.Parameters.AddWithValue("pass", pass);
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -365,7 +365,7 @@ namespace doan.Models
             using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
-                string query = "select * from PurchaseOrder where MaKh = @id";
+                string query = "select * from DONDATHANG where MaKh = @id";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("id", id);
                 using (var reader = cmd.ExecuteReader())
@@ -461,7 +461,7 @@ namespace doan.Models
             using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
-                string query = "select * from PurchaseOrder where maddh = @id";
+                string query = "select * from DONDATHANG where maddh = @id";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("id", id);
                 using (var reader = cmd.ExecuteReader())

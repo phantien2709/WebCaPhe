@@ -37,19 +37,19 @@ namespace doan.Controllers
                     
                     for (int i = 0; i < dataCart.Count; i++)
                     {
-                        Product dataProductNew = context.Product_id(dataCart[i].sanpham.MaSp);
+                        Product dataProductNew = context.Product_id(dataCart[i].products.MaSp);
                         if (dataProductNew.SoLuong <= 0)
                         {
-                            _notyfyService.Error("Sản phẩm "+dataCart[i].sanpham.TenSp+" đã hết hàng.");
+                            _notyfyService.Error("Sản phẩm "+dataCart[i].products.TenSp+" đã hết hàng.");
                             dataCart.RemoveAt(i);
                             i--;
                         }
                         else
                         {
-                            if (dataProductNew.SoLuong < dataCart[i].Soluong)
+                            if (dataProductNew.SoLuong < dataCart[i].volume)
                             {
-                                _notyfyService.Success("Sản phẩm " + dataCart[i].sanpham.TenSp + " đã cập nhật lại số lượng.");
-                                dataCart[i].Soluong = dataProductNew.SoLuong;
+                                _notyfyService.Success("Sản phẩm " + dataCart[i].products.TenSp + " đã cập nhật lại số lượng.");
+                                dataCart[i].volume = dataProductNew.SoLuong;
                             }
                         }
                         
@@ -83,14 +83,14 @@ namespace doan.Controllers
                     _notyfyService.Error("Sản phẩm đã hết hàng.");
                     return Redirect("/Cart/IndexCart");
                 }
-                string img = context.HinhAnhSP(productId)[0].LinkHinhAnh;
+                string img = context.ProductImage(productId)[0].LinkHinhAnh;
                 List<Cart> listCart = new List<Cart>()
                {
                    new Cart
                    {
-                       sanpham = product,
-                       hinhanh = img,
-                       Soluong = 1
+                       products = product,
+                       image = img,
+                       volume = 1
                    }
                };
                 
@@ -106,14 +106,14 @@ namespace doan.Controllers
                 bool check = true;
                 for (int i = 0; i < dataCart.Count; i++)
                 {
-                    if (dataCart[i].sanpham.MaSp == productId)
+                    if (dataCart[i].products.MaSp == productId)
                     {
-                        if (dataCart[i].sanpham.SoLuong == dataCart[i].Soluong)
+                        if (dataCart[i].products.SoLuong == dataCart[i].volume)
                         {
                             _notyfyService.Error("Sản phẩm đã đạt số lượng tối đa.");
                             return Redirect("/Cart/IndexCart");
                         }
-                        dataCart[i].Soluong++;
+                        dataCart[i].volume++;
                         check = false;
                     }
                 }
@@ -125,12 +125,12 @@ namespace doan.Controllers
                         _notyfyService.Error("Sản phẩm đã hết hàng.");
                         return Redirect("/Cart/IndexCart");
                     }
-                    string img = context.HinhAnhSP(productId)[0].LinkHinhAnh;
+                    string img = context.ProductImage(productId)[0].LinkHinhAnh;
                     dataCart.Add(new Cart
                     {
-                        sanpham = product,
-                        hinhanh = img,
-                        Soluong = 1
+                        products = product,
+                        image = img,
+                        volume = 1
                     });
                 }
                 
@@ -152,7 +152,7 @@ namespace doan.Controllers
             {
                 List<Cart> dataCart = JsonConvert.DeserializeObject<List<Cart>>(cart);
                 
-                dataCart.RemoveAll(item => item.sanpham.MaSp == productId);
+                dataCart.RemoveAll(item => item.products.MaSp == productId);
                 CookieOptions option = new CookieOptions();
                 option.Expires = DateTime.Now.AddDays(30);
                 Response.Cookies.Append("Cart", JsonConvert.SerializeObject(dataCart), option);
@@ -171,10 +171,10 @@ namespace doan.Controllers
                 List<Cart> dataCart = JsonConvert.DeserializeObject<List<Cart>>(cart);
                 for (int i = 0; i < dataCart.Count; i++)
                 {
-                    if (dataCart[i].sanpham.MaSp == productId)
+                    if (dataCart[i].products.MaSp == productId)
                     {
                         if (quantity<=1) dataCart.RemoveAt(i); 
-                        else dataCart[i].Soluong = quantity-1;
+                        else dataCart[i].volume = quantity-1;
                     }
                 }
                 CookieOptions option = new CookieOptions();
@@ -194,17 +194,17 @@ namespace doan.Controllers
                 List<Cart> dataCart = JsonConvert.DeserializeObject<List<Cart>>(cart);
                 for (int i = 0; i < dataCart.Count; i++)
                 {
-                    if (dataCart[i].sanpham.MaSp == productId)
+                    if (dataCart[i].products.MaSp == productId)
                     {
-                        var dataNew = context.Product_id(dataCart[i].sanpham.MaSp);
-                        if (dataNew.SoLuong == dataCart[i].Soluong)
+                        var dataNew = context.Product_id(dataCart[i].products.MaSp);
+                        if (dataNew.SoLuong == dataCart[i].volume)
                         {
                             _notyfyService.Error("Sản phẩm đã đạt số lượng tối đa.");
                             return Redirect("/Cart/IndexCart");
                         }
                         else
                         {
-                            dataCart[i].Soluong = quantity + 1;
+                            dataCart[i].volume = quantity + 1;
                         }                        
                     }
                 }

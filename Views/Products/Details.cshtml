@@ -151,7 +151,7 @@
                                                                     stt += 1;
                                                                     var id_add = "add_cart3" + @stt.ToString();
                                                                 }
-                                                                <form action="/GioHang/Add_cart?product_id=@item.MaSp" method="post" id="@id_add">
+                                                                <form action="/Cart/AddCart?product_id=@item.MaSp" method="post" id="@id_add">
                                                                     <a class="bg-warning rounded" href="#" onclick="document.getElementById('@id_add').submit();">
                                                                         <i class="pe-7s-cart" style="font-size:24px; font-weight:bold"></i>
                                                                     </a>

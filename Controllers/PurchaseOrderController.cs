@@ -69,7 +69,7 @@ namespace doan.Controllers
                 DateTime orderDate = DateTime.Now;
                 foreach (var item in dataCart)
                 {
-                    totalSum += Convert.ToInt32(item.Soluong * item.sanpham.GiaTien);
+                    totalSum += Convert.ToInt32(item.volume * item.products.GiaTien);
                 }
                 var cus = HttpContext.Session.GetString("KhachHang");
                 if (cus != null)
@@ -80,15 +80,15 @@ namespace doan.Controllers
                     {
                         foreach (var item in dataCart)
                         {
-                            var sump = Convert.ToInt32(item.Soluong * item.sanpham.GiaTien);
-                            var tmp = context.insert_CTDH(orderId, item.sanpham.MaSp, item.Soluong, sump);
+                            var sump = Convert.ToInt32(item.volume * item.products.GiaTien);
+                            var tmp = context.insert_CTDH(orderId, item.products.MaSp, item.volume, sump);
                             if (tmp == 0)
                             {
                                 _notyfyService.Error("Đã có lỗi xảy ra.");
                                 return Redirect("/Error404/Page404");
                             }
-                            var dataProductNew = context.Product_id(item.sanpham.MaSp);
-                            var tmp1 = context.update_SanPham(item.sanpham.MaSp, dataProductNew.SoLuong - item.Soluong);
+                            var dataProductNew = context.Product_id(item.products.MaSp);
+                            var tmp1 = context.update_SanPham(item.products.MaSp, dataProductNew.SoLuong - item.volume);
                         }
                         ViewData["MADDH"] = orderId;
                         Response.Cookies.Delete("Cart");

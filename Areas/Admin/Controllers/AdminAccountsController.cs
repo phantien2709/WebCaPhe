@@ -24,7 +24,7 @@ namespace doan.Areas.Admin.Controllers
         {
 
             ViewData["QuyenTruyCap"] = new SelectList(_context.Roles, "RoleId", "RoleName");
-            var storeDecorateContext = _context.Taikhoan.Include(t => t.Role);
+            var storeDecorateContext = _context.Accounts.Include(t => t.Role);
             return View(await storeDecorateContext.ToListAsync());
         }
 
@@ -36,7 +36,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var account = await _context.Taikhoan
+            var account = await _context.Accounts
                 .Include(t => t.Role)
                 .FirstOrDefaultAsync(m => m.MaTk == id);
             if (account == null)
@@ -79,7 +79,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var account = await _context.Taikhoan.FindAsync(id);
+            var account = await _context.Accounts.FindAsync(id);
             if (account == null)
             {
                 return NotFound();
@@ -132,7 +132,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var account = await _context.Taikhoan
+            var account = await _context.Accounts
                 .Include(t => t.Role)
                 .FirstOrDefaultAsync(m => m.MaTk == id);
             if (account == null)
@@ -148,15 +148,15 @@ namespace doan.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var account = await _context.Taikhoan.FindAsync(id);
-            _context.Taikhoan.Remove(account);
+            var account = await _context.Accounts.FindAsync(id);
+            _context.Accounts.Remove(account);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool AccountExists(int id)
         {
-            return _context.Taikhoan.Any(e => e.MaTk == id);
+            return _context.Accounts.Any(e => e.MaTk == id);
         }
     }
 }

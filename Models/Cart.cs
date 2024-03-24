@@ -7,8 +7,8 @@ namespace doan.Models
 {
     public class Cart
     {
-        public Product sanpham { get; set; }
-        public string hinhanh { get; set; }
-        public int Soluong { get; set; }
+        public Product products { get; set; }
+        public string image { get; set; }
+        public int volume { get; set; }
     }
 }

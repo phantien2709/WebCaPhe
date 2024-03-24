@@ -29,7 +29,7 @@ namespace doan.Areas.Admin.Controllers
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
             var pageSize = 20;
-            var isProCategories = _context.Danhmucsp.AsNoTracking()
+            var isProCategories = _context.Categories.AsNoTracking()
                 .OrderBy(x => x.MaDanhMuc);
             PagedList<Category> models = new PagedList<Category>(isProCategories, pageNumber, pageSize);
             ViewBag.CurrentPage = pageNumber;
@@ -44,7 +44,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var proCategories = await _context.Danhmucsp
+            var proCategories = await _context.Categories
                 .FirstOrDefaultAsync(m => m.MaDanhMuc == id);
             if (proCategories == null)
             {
@@ -84,7 +84,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var proCategories = await _context.Danhmucsp.FindAsync(id);
+            var proCategories = await _context.Categories.FindAsync(id);
             if (proCategories == null)
             {
                 return NotFound();
@@ -135,7 +135,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var proCategories = await _context.Danhmucsp
+            var proCategories = await _context.Categories
                 .FirstOrDefaultAsync(m => m.MaDanhMuc == id);
             if (proCategories == null)
             {
@@ -150,15 +150,15 @@ namespace doan.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var proCategories = await _context.Danhmucsp.FindAsync(id);
-            _context.Danhmucsp.Remove(proCategories);
+            var proCategories = await _context.Categories.FindAsync(id);
+            _context.Categories.Remove(proCategories);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ProductCategoriesExists(int id)
         {
-            return _context.Danhmucsp.Any(e => e.MaDanhMuc == id);
+            return _context.Categories.Any(e => e.MaDanhMuc == id);
         }
     }
 }

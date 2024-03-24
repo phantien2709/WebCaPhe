@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Two-Factor Authentication</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Include your stylesheets and scripts here -->
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form action="/Login/VerifyCode" class="login100-form validate-form" method="post">
+                    <span class="login100-form-title p-b-20" style="font-family:'Segoe UI'; color:orangered"> Two-Factor Authentication</span>
+                    <span class="login100-form-title p-b-28">
+                        <a asp-controller="Home" asp-action="About"><img class="img-logo" src="~/assets/images/logo/logo.jpg" alt="logo" /></a>
+                    </span>
+
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" name="Code" required />
+                        <span class="focus-input100" data-placeholder="Verification Code"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn" style="background-color: orange" type="submit">Verify</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include your scripts here -->
+</body>
+</html>

@@ -29,7 +29,7 @@ namespace doan.Areas.Admin.Controllers
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
             var pageSize = 20;
-            var isCustomers = _context.Khachhang.AsNoTracking()
+            var isCustomers = _context.Customers.AsNoTracking()
                 .OrderBy(x => x.MaKh);
             PagedList<Customer> models = new PagedList<Customer>(isCustomers, pageNumber, pageSize);
             ViewBag.CurrentPage = pageNumber;
@@ -44,7 +44,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var customer = await _context.Khachhang
+            var customer = await _context.Customers
                 .FirstOrDefaultAsync(m => m.MaKh == id);
             if (customer == null)
             {
@@ -84,7 +84,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var customer = await _context.Khachhang.FindAsync(id);
+            var customer = await _context.Customers.FindAsync(id);
             if (customer == null)
             {
                 return NotFound();
@@ -135,7 +135,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var customer = await _context.Khachhang
+            var customer = await _context.Customers
                 .FirstOrDefaultAsync(m => m.MaKh == id);
             if (customer == null)
             {
@@ -150,15 +150,15 @@ namespace doan.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var customer = await _context.Khachhang.FindAsync(id);
-            _context.Khachhang.Remove(customer);
+            var customer = await _context.Customers.FindAsync(id);
+            _context.Customers.Remove(customer);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool CustomerExists(int id)
         {
-            return _context.Khachhang.Any(e => e.MaKh == id);
+            return _context.Customers.Any(e => e.MaKh == id);
         }
     }
 }

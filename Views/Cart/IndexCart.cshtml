@@ -67,7 +67,7 @@
                                                         stt += 1;
                                                         var id_del = "delete_cart" + @stt.ToString();
                                                     }
-                                                    <form action="/GioHang/Delete_cart?product_id=@item.sanpham.MaSp" method="post" id="@id_del">
+                                                    <form action="/Cart/Delete_cart?product_id=@item.products.MaSp" method="post" id="@id_del">
                                                         <a href="#" onclick="document.getElementById('@id_del').submit();">
                                                             <i class="pe-7s-close" title="Remove"></i>
                                                         </a>
@@ -76,20 +76,20 @@
                                                 </td>
                                                 <td class="product-thumbnail">
                                                     <a href="javascript:void(0)">
-                                                        <img src="/Image/@item.hinhanh" alt="@item.hinhanh" style="width:100px">
+                                                        <img src="/Image/@item.image" alt="@item.image" style="width:100px">
                                                     </a>
                                                 </td>
-                                                <td class="product-name"><a href="/{@item.sanpham.MaSp}.html">@item.sanpham.TenSp</a></td>
-                                                <td class="product-price"><span class="amount">@item.sanpham.GiaTien.Value.ToString("#,##0") VNĐ</span></td>
+                                                <td class="product-name"><a href="/{@item.products.MaSp}.html">@item.products.TenSp</a></td>
+                                                <td class="product-price"><span class="amount">@item.products.GiaTien.Value.ToString("#,##0") VNĐ</span></td>
                                                 <td class="quantity">
                                                     @{
-                                                        var sl = @item.Soluong;
+                                                        var sl = @item.volume;
                                                         var id_minus = "minus_cart" + @stt.ToString();
                                                         var id_plus = "plus_cart" + @stt.ToString();
                                                     }
                                                     <div class="row p-5">
                                                         <div class="col-4 dec qtybutton">
-                                                            <form action="/GioHang/Minus_quantity?product_id=@item.sanpham.MaSp&sl=@sl" method="post" id="@id_minus">
+                                                            <form action="/Cart/Minus_quantity?product_id=@item.products.MaSp&sl=@sl" method="post" id="@id_minus">
                                                                 <a href="#" onclick="document.getElementById('@id_minus').submit();">
                                                                     <i class="fa fa-minus"></i>
                                                                 </a>
@@ -97,7 +97,7 @@
                                                         </div>
                                                         <div class="col-4 cart-plus-minus-box">@sl</div>
                                                         <div class="col-4 inc qtybutton">
-                                                            <form action="/GioHang/Plus_quantity?product_id=@item.sanpham.MaSp&sl=@sl" method="post" id="@id_plus">
+                                                            <form action="/Cart/Plus_quantity?product_id=@item.products.MaSp&sl=@sl" method="post" id="@id_plus">
                                                                 <a href="#" onclick="document.getElementById('@id_plus').submit();">
                                                                     <i class="fa fa-plus"></i>
                                                                 </a>
@@ -108,7 +108,7 @@
                                                     </div>      
                                                 </td>
                                                 @{
-                                                    var sump = @sl * @item.sanpham.GiaTien;
+                                                    var sump = @sl * @item.products.GiaTien;
                                                     tongtien += Convert.ToInt32(sump);
                                                 }
                                                 <td class="product-subtotal"><span class="amount">@sump.Value.ToString("#,##0") VNĐ</span></td>
@@ -134,7 +134,7 @@
                                             <ul>
                                         <li style="font-family:'Segoe UI'; font-size:18px">Tổng tiền: <span>@tongtien.ToString("#,##0") VNĐ</span></li>
                                 </ul>
-                                            <form action="/DonDatHang/Index_DDH" method="post" id="checkout">
+                                            <form action="/CustomerOrder/Index_Order" method="post" id="checkout">
                                                     <a class="button btn-warning rounded btn-dark-hover" href="#" onclick="document.getElementById('checkout').submit();">Thanh toán</a>
                                             </form>
                                         </div>

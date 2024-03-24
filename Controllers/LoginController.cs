@@ -9,14 +9,18 @@ using System.Threading.Tasks;
 
 namespace doan.Controllers
 {
-    public class LoginController:Controller
+    public class LoginController : Controller
     {
         private readonly StoreContext _context;
         public INotyfService _notyfyService { get; set; }
+        private readonly CacheDecorator _cacheDecorator;
+
         public LoginController(StoreContext context, INotyfService notifyService)
         {
             _context = context;
             _notyfyService = notifyService;
+            _cacheDecorator = new CacheDecorator();
+
         }
         [HttpGet]
         public IActionResult SignIn()
@@ -24,6 +28,7 @@ namespace doan.Controllers
             var cusId = HttpContext.Session.GetString("Customer");
             if (cusId != null)
             {
+
                 _notyfyService.Warning("Bạn đã đăng nhập. Hãy đăng xuất trước khi thực hiện nếu muốn.");
                 return Redirect("/Home/Index");
             }
@@ -49,7 +54,7 @@ namespace doan.Controllers
             if (acc.MaTk != 0)
             {
                 Roles role = context.GetRoles(acc.RoleId);
-                if (role.RoleName.Equals("Khách hàng"))
+                if (role.RoleId.Equals(2))
                 {
                     Customer cus = context.GetKhachHang(acc.SoDienThoai);
                     HttpContext.Session.SetString("KhachHang", cus.MaKh.ToString());
@@ -57,17 +62,17 @@ namespace doan.Controllers
                 }
                 else
                 {
-                    return Redirect("/Admin");
+                    return Redirect("/Home/Index");
                 }
                 _notyfyService.Success("Đăng nhập thành công.");
-                return Redirect("/Home/Index");
+                return Redirect("/Admin");
             }
             else
             {
                 _notyfyService.Error("Đăng nhập không thành công. Kiểm tra thông tin đăng nhập.");
-                
+
                 return RedirectToAction(nameof(SignIn));
-            }            
+            }
         }
         [HttpPost]
         public IActionResult SignUp(string cusName, string phone, DateTime dob, string gender, string address, string pass, string confirmpass)

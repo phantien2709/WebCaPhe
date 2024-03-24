@@ -17,9 +17,9 @@ namespace doan.Controllers
             foreach(var item in detail)
             {
                 list.Add(new Cart() { 
-                    sanpham =context.Product_id(item.MaSp),
-                    Soluong = item.SoLuong,
-                    hinhanh = context.HinhAnhSP(item.MaSp)[0].LinkHinhAnh
+                    products =context.Product_id(item.MaSp),
+                    volume = item.SoLuong,
+                    image = context.ProductImage(item.MaSp)[0].LinkHinhAnh
                 });
             }
             ViewBag.donDH = list;

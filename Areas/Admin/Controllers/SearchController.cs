@@ -38,7 +38,7 @@ namespace doan.Areas.Admin.Controllers
             {
                 return PartialView("ListProductsSearchPartial", null);
             }
-            ls = _context.Sanpham
+            ls = _context.Products
                 .AsNoTracking()
                 .Include(a => a.MaDanhMucNavigation)
                 .Include(a => a.MaNccNavigation)

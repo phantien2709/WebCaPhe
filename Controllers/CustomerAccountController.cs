@@ -48,7 +48,7 @@ namespace doan.Controllers
                     if (passwordtk.Length>20)
                     {
                         _notyfyService.Error("Đã có lỗi xảy ra.");
-                        return Redirect("/TaiKhoanKH/IndexAccount");
+                        return Redirect("/CustomerAccount/IndexAccount");
                     }
                     var tmp = context.DoiPass(accId, passwordtk);
                     if (tmp != 0)
@@ -69,7 +69,7 @@ namespace doan.Controllers
             {
                 _notyfyService.Error("Mật khẩu hiện tại sai.");
             }
-            return Redirect("/TaiKhoanKH/IndexAccount");
+            return Redirect("/CustomerAccount/IndexAccount");
         }
     }
 }

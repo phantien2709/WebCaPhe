@@ -23,7 +23,7 @@ namespace doan.Controllers
                     List<string> listImg = new List<string>();
                     foreach (var item in listProduct)
                     {
-                        string str = context.HinhAnhSP(item.MaSp)[0].LinkHinhAnh;
+                        string str = context.ProductImage(item.MaSp)[0].LinkHinhAnh;
                         listImg.Add(str);
                     }
                     ViewBag.HinhAnhSP = listImg;

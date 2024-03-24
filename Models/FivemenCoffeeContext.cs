@@ -14,17 +14,17 @@ namespace doan.Models
         {
         }
 
-        public virtual DbSet<OrderDetail> Ctdh { get; set; }
-        public virtual DbSet<Category> Danhmucsp { get; set; }
-        public virtual DbSet<PurchaseOrder> Dondathang { get; set; }
-        public virtual DbSet<Image> Hinhanh { get; set; }
-        public virtual DbSet<Customer> Khachhang { get; set; }
-        public virtual DbSet<Supplier> Nhacungcap { get; set; }
-        public virtual DbSet<Staff> Nhanvien { get; set; }
-        public virtual DbSet<Carrier> Nhavanchuyen { get; set; }
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; } //Ctdh
+        public virtual DbSet<Category> Categories { get; set; } // Danhmucsp
+        public virtual DbSet<PurchaseOrder> PurchaseOrders { get; set; } // Dondathang
+        public virtual DbSet<Image> Image { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
+        public virtual DbSet<Staff> Staffs { get; set; }
+        public virtual DbSet<Carrier> Carriers { get; set; }
         public virtual DbSet<Roles> Roles { get; set; }
-        public virtual DbSet<Product> Sanpham { get; set; }
-        public virtual DbSet<Account> Taikhoan { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Voucher> Voucher { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -294,7 +294,7 @@ namespace doan.Models
                     .HasMaxLength(50);
 
                 entity.HasOne(d => d.MaDanhMucNavigation)
-                    .WithMany(p => p.Sanpham)
+                    .WithMany(p => p.Products)
                     .HasForeignKey(d => d.MaDanhMuc)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_DANHMUCSP");

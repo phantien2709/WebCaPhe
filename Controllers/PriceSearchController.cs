@@ -25,7 +25,7 @@ namespace doan.Controllers
             {
                 return PartialView("ListTheoGia", null);
             }
-            ls = _context.Sanpham
+            ls = _context.Products
                 .AsNoTracking()
                 .Include(a => a.MaDanhMucNavigation)
                 .Include(a => a.MaNccNavigation)

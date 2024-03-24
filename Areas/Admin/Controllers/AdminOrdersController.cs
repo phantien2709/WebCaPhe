@@ -28,7 +28,7 @@ namespace doan.Areas.Admin.Controllers
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
             var pageSize = 20;
-            var isOrders = _context.Dondathang
+            var isOrders = _context.PurchaseOrders
                 .AsNoTracking()
                 .Include(x => x.MaKhNavigation)
                 .Include(x => x.MaNvNavigation)
@@ -47,7 +47,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var order = await _context.Dondathang
+            var order = await _context.PurchaseOrders
                 .Include(d => d.MaKhNavigation)
                 .Include(d => d.MaNvNavigation)
                 .Include(d => d.MaNvcNavigation)
@@ -64,9 +64,9 @@ namespace doan.Areas.Admin.Controllers
         // GET: Admin/AdminOrders/Create
         public IActionResult Create()
         {
-            ViewData["MaKh"] = new SelectList(_context.Khachhang, "TenKh", "DiaChi");
-            ViewData["MaNv"] = new SelectList(_context.Nhanvien, "MaNv", "ChucVu");
-            ViewData["MaNvc"] = new SelectList(_context.Nhavanchuyen, "MaNvc", "MaNvc");
+            ViewData["MaKh"] = new SelectList(_context.Customers, "TenKh", "DiaChi");
+            ViewData["MaNv"] = new SelectList(_context.Staffs, "MaNv", "ChucVu");
+            ViewData["MaNvc"] = new SelectList(_context.Carriers, "MaNvc", "MaNvc");
             ViewData["MaVoucher"] = new SelectList(_context.Voucher, "MaVoucher", "TenVoucher");
             return View();
         }
@@ -84,9 +84,9 @@ namespace doan.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaKh"] = new SelectList(_context.Khachhang, "MaKh", "DiaChi", order.MaKh);
-            ViewData["MaNv"] = new SelectList(_context.Nhanvien, "MaNv", "ChucVu", order.MaNv);
-            ViewData["MaNvc"] = new SelectList(_context.Nhavanchuyen, "MaNvc", "MaNvc", order.MaNvc);
+            ViewData["MaKh"] = new SelectList(_context.Customers, "MaKh", "DiaChi", order.MaKh);
+            ViewData["MaNv"] = new SelectList(_context.Staffs, "MaNv", "ChucVu", order.MaNv);
+            ViewData["MaNvc"] = new SelectList(_context.Carriers, "MaNvc", "MaNvc", order.MaNvc);
             ViewData["MaVoucher"] = new SelectList(_context.Voucher, "MaVoucher", "TenVoucher", order.MaVoucher);
             return View(order);
         }
@@ -99,14 +99,14 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var order = await _context.Dondathang.FindAsync(id);
+            var order = await _context.PurchaseOrders.FindAsync(id);
             if (order == null)
             {
                 return NotFound();
             }
-            ViewData["MaKh"] = new SelectList(_context.Khachhang, "MaKh", "TenKh", order.MaKh);
-            ViewData["MaNv"] = new SelectList(_context.Nhanvien, "MaNv", "TenNv", order.MaNv);
-            ViewData["MaNvc"] = new SelectList(_context.Nhavanchuyen, "MaNvc", "TenNvc", order.MaNvc);
+            ViewData["MaKh"] = new SelectList(_context.Customers, "MaKh", "TenKh", order.MaKh);
+            ViewData["MaNv"] = new SelectList(_context.Staffs, "MaNv", "TenNv", order.MaNv);
+            ViewData["MaNvc"] = new SelectList(_context.Carriers, "MaNvc", "TenNvc", order.MaNvc);
             ViewData["MaVoucher"] = new SelectList(_context.Voucher, "MaVoucher", "TenVoucher", order.MaVoucher);
             return View(order);
         }
@@ -156,9 +156,9 @@ namespace doan.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaKh"] = new SelectList(_context.Khachhang, "MaKh", "DiaChi", order.MaKh);
-            ViewData["MaNv"] = new SelectList(_context.Nhanvien, "MaNv", "ChucVu", order.MaNv);
-            ViewData["MaNvc"] = new SelectList(_context.Nhavanchuyen, "MaNvc", "MaNvc", order.MaNvc);
+            ViewData["MaKh"] = new SelectList(_context.Customers, "MaKh", "DiaChi", order.MaKh);
+            ViewData["MaNv"] = new SelectList(_context.Staffs, "MaNv", "ChucVu", order.MaNv);
+            ViewData["MaNvc"] = new SelectList(_context.Carriers, "MaNvc", "MaNvc", order.MaNvc);
             ViewData["MaVoucher"] = new SelectList(_context.Voucher, "MaVoucher", "TenVoucher", order.MaVoucher);
             return View(order);
         }
@@ -171,7 +171,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var order = await _context.Dondathang
+            var order = await _context.PurchaseOrders
                 .Include(d => d.MaKhNavigation)
                 .Include(d => d.MaNvNavigation)
                 .Include(d => d.MaNvcNavigation)
@@ -190,15 +190,15 @@ namespace doan.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var order = await _context.Dondathang.FindAsync(id);
-            _context.Dondathang.Remove(order);
+            var order = await _context.PurchaseOrders.FindAsync(id);
+            _context.PurchaseOrders.Remove(order);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool OrderExists(int id)
         {
-            return _context.Dondathang.Any(e => e.MaDdh == id);
+            return _context.PurchaseOrders.Any(e => e.MaDdh == id);
         }
     }
 }

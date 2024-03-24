@@ -22,7 +22,7 @@ namespace doan.Areas.Admin.Controllers
         // GET: Admin/AdminSuplliers
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Nhacungcap.ToListAsync());
+            return View(await _context.Suppliers.ToListAsync());
         }
 
         // GET: Admin/AdminSuplliers/Details/5
@@ -33,7 +33,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var suppliers = await _context.Nhacungcap
+            var suppliers = await _context.Suppliers
                 .FirstOrDefaultAsync(m => m.MaNcc == id);
             if (suppliers == null)
             {
@@ -73,7 +73,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var supplier = await _context.Nhacungcap.FindAsync(id);
+            var supplier = await _context.Suppliers.FindAsync(id);
             if (supplier == null)
             {
                 return NotFound();
@@ -124,7 +124,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var supplier = await _context.Nhacungcap
+            var supplier = await _context.Suppliers
                 .FirstOrDefaultAsync(m => m.MaNcc == id);
             if (supplier == null)
             {
@@ -139,15 +139,15 @@ namespace doan.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var supplier = await _context.Nhacungcap.FindAsync(id);
-            _context.Nhacungcap.Remove(supplier);
+            var supplier = await _context.Suppliers.FindAsync(id);
+            _context.Suppliers.Remove(supplier);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool SupplierExists(int id)
         {
-            return _context.Nhacungcap.Any(e => e.MaNcc == id);
+            return _context.Suppliers.Any(e => e.MaNcc == id);
         }
     }
 }

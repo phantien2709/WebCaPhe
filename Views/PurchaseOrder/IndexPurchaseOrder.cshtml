@@ -89,10 +89,10 @@
                                         {
                                             <tr class="cart_item">
                                                 <td class="cart-product-name">
-                                                    @item.sanpham.TenSp <strong class="product-quantity"> × @item.Soluong</strong>
+                                                    @item.products.TenSp <strong class="product-quantity"> × @item.volume</strong>
                                                 </td>
                                                 @{
-                                                    var sump = @item.Soluong * @item.sanpham.GiaTien;
+                                                    var sump = @item.volume * @item.products.GiaTien;
                                                     tongtien += Convert.ToInt32(sump);
                                                 }
                                                 <td class="cart-product-total"><span class="amount">@sump.Value.ToString("#,##0") VNĐ</span></td>

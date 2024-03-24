@@ -24,7 +24,7 @@ namespace doan.Controllers
             {
                 var pageNumber = page == null || page <= 0 ? 1 : page.Value;
                 var pageSize = 8;
-                var IsSanphams = _context.Sanpham.AsNoTracking()
+                var IsSanphams = _context.Products.AsNoTracking()
                     .OrderBy(x => x.MaSp);
                 PagedList<Product> models = new PagedList<Product>(IsSanphams, pageNumber, pageSize);
                 ViewBag.CurrentPage = pageNumber;

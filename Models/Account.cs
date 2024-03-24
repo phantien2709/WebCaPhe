@@ -9,7 +9,7 @@ namespace doan.Models
         public int MaTk { get; set; }
         public string SoDienThoai { get; set; }
         public string MatKhau { get; set; }
-        public int? RoleId { get; set; }
+        public int RoleId { get; set; }
 
         public virtual Roles Role { get; set; }
     }

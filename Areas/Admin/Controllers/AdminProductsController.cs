@@ -33,7 +33,7 @@ namespace doan.Areas.Admin.Controllers
             List<Product> isProducts = new List<Product>();
             if (cateId != 0)
             {
-                isProducts = _context.Sanpham
+                isProducts = _context.Products
                 .AsNoTracking()
                 .Where(x=>x.MaDanhMuc==cateId)
                 .Include(x => x.MaDanhMucNavigation)
@@ -42,7 +42,7 @@ namespace doan.Areas.Admin.Controllers
             }
             else
             {
-                isProducts = _context.Sanpham
+                isProducts = _context.Products
                 .AsNoTracking()
                 .Include(x => x.MaDanhMucNavigation)
                 .Include(x => x.MaNccNavigation)
@@ -53,9 +53,9 @@ namespace doan.Areas.Admin.Controllers
             ViewBag.Currentmadanhmuc = cateId;
             ViewBag.CurrentPage = pageNumber;
             
-            ViewData["Danhmuc"] = new SelectList(_context.Danhmucsp, "MaDanhMuc", "TenDanhMuc", cateId);
+            ViewData["Danhmuc"] = new SelectList(_context.Categories, "MaDanhMuc", "TenDanhMuc", cateId);
 
-            ViewData["Supplier"] = new SelectList(_context.Nhacungcap, "MaNcc", "TenNcc");
+            ViewData["Supplier"] = new SelectList(_context.Suppliers, "MaNcc", "TenNcc");
 
             return View(models);
         }
@@ -76,7 +76,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Sanpham
+            var product = await _context.Products
                 .Include(s => s.MaDanhMucNavigation)
                 .Include(s => s.MaNccNavigation)
                 .FirstOrDefaultAsync(m => m.MaSp == id);
@@ -91,8 +91,8 @@ namespace doan.Areas.Admin.Controllers
         // GET: Admin/AdminProducts/Create
         public IActionResult Create()
         {
-            ViewData["Danhmuc"] = new SelectList(_context.Danhmucsp, "MaDanhMuc", "TenDanhMuc");
-            ViewData["Supplier"] = new SelectList(_context.Nhacungcap, "MaNcc", "TenNcc");
+            ViewData["Danhmuc"] = new SelectList(_context.Categories, "MaDanhMuc", "TenDanhMuc");
+            ViewData["Supplier"] = new SelectList(_context.Suppliers, "MaNcc", "TenNcc");
             return View();
         }
 
@@ -119,8 +119,8 @@ namespace doan.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             
-            ViewData["Danhmuc"] = new SelectList(_context.Danhmucsp, "MaDanhMuc", "TenDanhMuc", product.MaDanhMuc);
-            ViewData["Supplier"] = new SelectList(_context.Nhacungcap, "MaNcc", "TenNcc", product.MaNcc);
+            ViewData["Danhmuc"] = new SelectList(_context.Categories, "MaDanhMuc", "TenDanhMuc", product.MaDanhMuc);
+            ViewData["Supplier"] = new SelectList(_context.Suppliers, "MaNcc", "TenNcc", product.MaNcc);
             return View(product);
         }
 
@@ -132,13 +132,13 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Sanpham.FindAsync(id);
+            var product = await _context.Products.FindAsync(id);
             if (product == null)
             {
                 return NotFound();
             }
-            ViewData["Danhmuc"] = new SelectList(_context.Danhmucsp, "MaDanhMuc", "TenDanhMuc", product.MaDanhMuc);
-            ViewData["Supplier"] = new SelectList(_context.Nhacungcap, "MaNcc", "TenNcc", product.MaNcc);
+            ViewData["Danhmuc"] = new SelectList(_context.Categories, "MaDanhMuc", "TenDanhMuc", product.MaDanhMuc);
+            ViewData["Supplier"] = new SelectList(_context.Suppliers, "MaNcc", "TenNcc", product.MaNcc);
             return View(product);
         }
 
@@ -183,8 +183,8 @@ namespace doan.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Danhmuc"] = new SelectList(_context.Danhmucsp, "MaDanhMuc", "TenDanhMuc", product.MaDanhMuc);
-            ViewData["Supplier"] = new SelectList(_context.Nhacungcap, "MaNcc", "TenNcc", product.MaNcc);
+            ViewData["Danhmuc"] = new SelectList(_context.Categories, "MaDanhMuc", "TenDanhMuc", product.MaDanhMuc);
+            ViewData["Supplier"] = new SelectList(_context.Suppliers, "MaNcc", "TenNcc", product.MaNcc);
             return View(product);
         }
 
@@ -196,7 +196,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Sanpham
+            var product = await _context.Products
                 .Include(s => s.MaDanhMucNavigation)
                 .Include(s => s.MaNccNavigation)
                 .FirstOrDefaultAsync(m => m.MaSp == id);
@@ -213,8 +213,8 @@ namespace doan.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var product = await _context.Sanpham.FindAsync(id);
-            _context.Sanpham.Remove(product);
+            var product = await _context.Products.FindAsync(id);
+            _context.Products.Remove(product);
             await _context.SaveChangesAsync();
             _notyfyService.Success("Xóa thành công");
 
@@ -223,7 +223,7 @@ namespace doan.Areas.Admin.Controllers
 
         private bool ProductExists(int id)
         {
-            return _context.Sanpham.Any(e => e.MaSp == id);
+            return _context.Products.Any(e => e.MaSp == id);
         }
     }
 }

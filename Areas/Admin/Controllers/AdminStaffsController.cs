@@ -24,7 +24,7 @@ namespace doan.Areas.Admin.Controllers
         {
             
 
-            return View(await _context.Nhanvien.ToListAsync());
+            return View(await _context.Staffs.ToListAsync());
         }
 
         // GET: Admin/AdminStaffs/Details/5
@@ -36,7 +36,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var staff = await _context.Nhanvien
+            var staff = await _context.Staffs
                 .FirstOrDefaultAsync(m => m.MaNv == id);
             if (staff == null)
             {
@@ -76,7 +76,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var staff = await _context.Nhanvien.FindAsync(id);
+            var staff = await _context.Staffs.FindAsync(id);
             if (staff == null)
             {
                 return NotFound();
@@ -127,7 +127,7 @@ namespace doan.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var staff = await _context.Nhanvien
+            var staff = await _context.Staffs
                 .FirstOrDefaultAsync(m => m.MaNv == id);
             if (staff == null)
             {
@@ -142,15 +142,15 @@ namespace doan.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var staff = await _context.Nhanvien.FindAsync(id);
-            _context.Nhanvien.Remove(staff);
+            var staff = await _context.Staffs.FindAsync(id);
+            _context.Staffs.Remove(staff);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool StaffExists(int id)
         {
-            return _context.Nhanvien.Any(e => e.MaNv == id);
+            return _context.Staffs.Any(e => e.MaNv == id);
         }
     }
 }
